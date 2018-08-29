@@ -1,0 +1,34 @@
+section.s-media
+
+	.social-media
+		+flexbox
+		+align-items(center)
+		text-align: center
+		+justify-content(space-around)
+		margin: 124px 0 124px
+		
+
+		+breakpoint($tablet)
+			display: block
+
+
+		li
+			font-size: 97px
+			
+			a
+				text-decoration: none 	!important
+				color: $cinza-claro		!important
+
+				+transition(.5s)
+				&:hover,
+				&:focus
+					text-decoration: none 	!important
+					color: $laranja !important
+			
+			/*
+			.icones
+				//+transition(.5s)
+			    //text-decoration: none !important
+			    color: #ff3f00	!important*/
+
+

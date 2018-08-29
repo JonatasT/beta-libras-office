@@ -1,0 +1,87 @@
+header
+	+clearfix
+	min-height: 805px
+
+	/*	========= Slider ========= */
+	background:
+		//color: $laranja-opaco
+		image: url('../images/fundo5-slide-pagina-inicial.jpg')
+		position: top center
+		repeat: no-repeat
+		attachment: fixed
+		size: cover
+	/*  =========================== */
+	
+
+	/*  ========== Logo =========== */					//De preferencia SVG pra manipulação de cenas de rearranjo
+	.logo
+		position: fixed
+		float: left
+		//margin: 32px 0 0
+		margin: -6px 0 0  
+
+		img
+			width: 219px
+			heigth: 103px
+	
+	/*  =========================== */
+
+
+	/*  === Barra de navegação class===  */
+	.navigation
+		height: 90px		!important
+		width: 100%
+
+		background: $laranja
+		position: fixed 		// ===================================== //
+		right: 0 				//mantem a navbar no top enquando scrolling
+		
+		padding: 35px 30px 0  	//otimização de resolução para dispositivos móveis//
+		+breakpoint($tablet)
+			display: none
+		+breakpoint($celular)
+			display: none
+	
+	/* ============================= */
+
+	/* ========= Nav tag =========== */
+	nav
+		ul
+			li
+				display: inline-block
+				margin: 0 22px 0 0
+
+				float: right
+
+				a
+					color: $branco
+					text-transform: none
+					
+					+transition(.5s)
+					&:hover,
+					&:focus
+						text-decoration: none 	!important
+						color: $amarelo
+	
+
+	/* ========= Titles ============ */
+	h1
+		clear: both
+		margin: 415px 0 7px		!important
+		text-transform: uppercase
+		font-size: 47px
+		color: $branco
+		+breakpoint($celular)
+			+font-size(60px) 
+	/* ============================= */
+
+	/* ========= Parágrafos ======== */
+	p
+		margin: 0 0 54px
+		font-size: 25px
+		font-style: italic
+		color: $branco 						//$cinza-medio
+		+breakpoint($celular)
+			+font-size(35px)
+
+	/* ============================== */
