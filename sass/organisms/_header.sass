@@ -2,18 +2,8 @@ header
 	+clearfix
 	min-height: 805px
 
-	/*	========= Slider ========= */
-	background:
-		//color: $laranja-opaco
-		image: url('../images/fundo5-slide-pagina-inicial.jpg')
-		position: top center
-		repeat: no-repeat
-		attachment: fixed
-		size: cover
-	/*  =========================== */
-	
 
-	/*  ========== Logo =========== */					//De preferencia SVG pra manipulação de cenas de rearranjo
+	//Logo do LIBRAS Office				*De preferencia SVG pra manipulação de cenas de rearranjo
 	.logo
 		position: fixed
 		float: left
@@ -24,27 +14,27 @@ header
 			width: 219px
 			heigth: 103px
 	
-	/*  =========================== */
 
 
-	/*  === Barra de navegação class===  */
+
+	//Barra de navegação
 	.navigation
 		height: 90px		!important
 		width: 100%
 
 		background: $laranja
-		position: fixed 		// ===================================== //
+		position: fixed 		
 		right: 0 				//mantem a navbar no top enquando scrolling
 		
-		padding: 35px 30px 0  	//otimização de resolução para dispositivos móveis//
+		padding: 35px 30px 0  	//otimização de resolução para dispositivos móveis
 		+breakpoint($tablet)
 			display: none
 		+breakpoint($celular)
 			display: none
 	
-	/* ============================= */
 
-	/* ========= Nav tag =========== */
+
+	//Configurações gerais barra de navegação
 	nav
 		ul
 			li
@@ -64,7 +54,7 @@ header
 						color: $amarelo
 	
 
-	/* ========= Titles ============ */
+	//Títulos
 	h1
 		clear: both
 		margin: 415px 0 7px		!important
@@ -73,9 +63,9 @@ header
 		color: $branco
 		+breakpoint($celular)
 			+font-size(60px) 
-	/* ============================= */
 
-	/* ========= Parágrafos ======== */
+
+	//Parágrafos
 	p
 		margin: 0 0 54px
 		font-size: 25px
@@ -83,5 +73,3 @@ header
 		color: $branco 						//$cinza-medio
 		+breakpoint($celular)
 			+font-size(35px)
-
-	/* ============================== */
