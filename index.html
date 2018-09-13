@@ -1,71 +1,304 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
 	<title>Site LIBRAS - Office</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- conteudo atomic design -->
 	<link rel="stylesheet" href="css/geral.css">
 	<link rel="stylesheet" href="css/home.css">
 	<link rel="stylesheet" href="css/plugins.css">
+
+	<!-- fontawesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<!-- fonte roboto -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300' rel='stylesheet' type='text/css'>
+    <!-- owl.carousel CSS -->
+    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="owl-carousel/owl.theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="owl.transitions.css">
 	
+
 </head>
 <body>
 	<header>
-		<div class="container">
-			<nav class="navigation">
-				
-				<div class="container">
-					<div class="logo">
-						<a href="index.html">
-							<img src="images/logo-libras-office-topo.svg" alt="LIBRAS Office">
-						</a>
-					</div>
+		<!-- ======== NAVBAR ========= -->
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+	                <button type="button" class="navbar-toggle collapsed" >
+	                  <span class="sr-only"></span>
+	                  <span class="icon-bar"></span>
+	                  <span class="icon-bar"></span>
+	                  <span class="icon-bar"></span>
+	                </button>
+				  <!-- offcanvas-trigger-effects -->
+					<h1 class="logo"><a class="navbar-brand" href="index.html"><img src="./images/logo-libras-office-topo.svg" alt=""></a></h1>
 				</div>
-				
 
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="index.html">Projetos</a></li>
+
+						<li class="dropdown"><a href="#" >Comunidade<b class="caret"></b></a>
+							<!-- submenu-wrapper -->
+							<div class="submenu-wrapper submenu-wrapper-topbottom">
+								<div class="submenu-inner  submenu-inner-topbottom">
+									<ul class="dropdown-menu">
+										<li><a href="participe.html">Participe</a></li>
+										<li><a href="desenvolvimento.html">Desenvolvimento</a></li>
+										<li><a href="wiki.html">Wiki</a></li>
+									</ul>
+								</div><!-- /.submenu-inner -->
+							</div> <!-- /.submenu-wrapper -->
+						</li>
+
+						<li class="dropdown"><a href="#" >Ajuda<b class="caret"></b></a>
+							<!-- submenu-wrapper -->
+							<div class="submenu-wrapper submenu-wrapper-topbottom">
+								<div class="submenu-inner  submenu-inner-topbottom">
+									<ul class="dropdown-menu">
+										<li><a href="feedback.html">Feedback</a></li>
+										<li><a href="listas-de-discussao.html">Listas de discussão</a></li>
+										<li><a href="documentacao.html">Documentação</a></li>
+										<li><a href="requisitos-dos-sistemas.html">Requisitos dos sistemas</a></li>
+										<li><a href="suporte.html">Suporte</a></li>
+									</ul>
+								</div><!-- /.submenu-inner -->
+							</div> <!-- /.submenu-wrapper -->
+						</li>
+						<li><a href="baixar.html">Baixar</a></li>
+						<li class="dropdown"><a href="#" >Descubra <b class="caret"></b></a>
+							<!-- submenu-wrapper -->
+							<div class="submenu-wrapper submenu-wrapper-topbottom">
+								<div class="submenu-inner  submenu-inner-topbottom">
+									<ul class="dropdown-menu">
+										<li><a href="o-que-e.html">O que é</a></li>
+										<li><a href="novos-recursos.html">Novos recursos</a></li>
+										<li><a href="#">...nome dos programas</a></li>
+									</ul>
+								</div><!-- /.submenu-inner -->
+							</div> <!-- /.submenu-wrapper -->
+						</li>
+
+
+						<li class="dropdown"><a href="#" >Sobre nós <b class="caret"></b></a>
+							<!-- submenu-wrapper -->
+							<div class="submenu-wrapper submenu-wrapper-topbottom">
+								<div class="submenu-inner  submenu-inner-topbottom">
+									<ul class="dropdown-menu">
+										<li><a href="historia-do-libras-office.html">História do LIBRAS Office</a></li>
+										<li><a href="quem-somos.html">Quem somos?</a></li>
+										<li><a href="codigo-fonte.html">Código fonte</a></li>
+										<li><a href="contato.html">Contato</a></li>
+									</ul>
+								</div><!-- /.submenu-inner -->
+							</div> <!-- /.submenu-wrapper -->
+						</li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container -->
+		</nav>
+		<!-- #navbar -->
+
+		<!-- ======== OFFCANVAS MENU SIDEBAR ========= -->
+	    <div class="offcanvas-menu offcanvas-effect visible-xs">
+	      <button type="button" class="close" aria-hidden="true" data-toggle="offcanvas" id="off-canvas-close-btn">&times;</button>
+	      	<div>
+		      <div>
 				<ul>
-					<li><a href="sobre-nos.html">Sobre nós</a></li>
-					<li><a href="descubra.html">Descubra</a></li>
-					<li><a href="baixar.html">Baixar</a></li>
-					<li><a href="ajuda.html">Ajuda</a></li>
-					<li><a href="comunidade.html">Comunidade</a></li>
-					<li><a href="projetos.html">Projetos</a></li>			
+					<li><a href="#">Projetos</a>
+						<ul>
+							<li class="active"><a href="index.html">Início</a></li>
+						</ul>
+					</li>
+
+					<li><a href="#">Comunidade</a>
+						<ul>
+							<li><a href="about-us.html"> Participe</a></li>
+							<li><a href="about-me.html"> Desenvolvimento</a></li>
+							<li><a href="about-me.html"> Wiki</a></li>
+						</ul>
+					</li>
+
+					<li><a href="#">Ajuda</a>
+						<ul>
+							<li><a href="blog.html">Feedback</a></li>
+							<li><a href="blog-single.html"> Listas de discussão</a></li>
+							<li><a href="blog-single.html"> Documentação</a></li>
+							<li><a href="blog-single.html"> Requisitos dos sistemas</a></li>
+							<li><a href="blog-single.html"> Suporte</a></li>
+						</ul>
+					</li>
+					<li><a href="contact.html"> Contact</a></li>
+					<li><a href="#">Descubra</a>
+						<ul>
+							<li><a href="portfolio-four.html"> O que é</a></li>
+							<li><a href="portfolio-three.html"> Novos recursos</a></li>
+							<li><a href="portfolio-two.html"> ...nome dos programas</a></li>
+						</ul>
+					</li>
+
+
+					<li><a href="#">Sobre nós</a>
+						<ul>
+							<li><a href="job-page.html"> História do LIBRAS Office</a></li>
+							<li><a href="clients-page.html"> Quem somos?</a></li>
+							<li><a href="faq.html"> Código font</a></li>
+							<li><a href="typography.html"> Contato</a></li>
+						</ul>
+					</li>
 				</ul>
-			</nav>
-			
-			<div class="slider">
-				<h1><strong>Um Software Livre</strong></h1>
-			<p>O LIBRAS Office é a suite office que a comunidade de surdos sonhou ter por anos</p>
-			<a class="botao-download" href="baixar.html">
-				<div class="face-primaria">
-			    	<span class="icon fa fa-cloud"></span>
-			    	Baixe agora
-				</div>
-			  
-				<div class="face-secundaria">
-			    	<span class="icon fa fa-hdd-o"></span>
-			    	Tamanho: 200 Mb
-				</div>
-			</a>
-			<!--<a href="#" class="botao medio">Baixe agora</a>-->
+			  </div>
 			</div>
-			
-	</div>
+	    </div><!-- .offcanvas-menu SIDEBAR -->
+
 	</header>
-	
+		<div id="x-corp-carousel" class="carousel slide hero-slide" data-ride="carousel">
+            <!-- Indicadores -->
+            <ol class="carousel-indicators">
+                <li data-target="#x-corp-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#x-corp-carousel" data-slide-to="1"></li>
+                <li data-target="#x-corp-carousel" data-slide-to="2"></li>
+                <li data-target="#x-corp-carousel" data-slide-to="3"></li>
+                <li data-target="#x-corp-carousel" data-slide-to="4"></li>
+            </ol>
+
+            <!-- Wrapper para slider -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img class="slides" src="images/fundo5-slide-pagina-inicial.jpg" alt="Slide 1">
+                    <!--Slide imagem-->
+
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <small class="animated fadeIn">UMA INICIATIVA UFRJ</small>
+                            <div class="phone animated lightSpeedIn">EXPERIMENTE O NOVO</div>
+                            <h1 class="animated lightSpeedIn">UM SOFTWARE  <br>LIVRE</h1>
+
+                            <p class="lead animated lightSpeedIn">O LIBRAS Office é a suite office que a comunidade de 
+                            surdos sonhou ter por anos.</p>
+							
+							<!--botão download -->
+                            <a class="botao-download" href="baixar.html">
+								<div class="face-primaria">
+							    	<span class="icon fa fa-cloud"></span>
+							    	Baixe agora
+								</div>
+							  
+								<div class="face-secundaria">
+							    	<span class="icon fa fa-hdd-o"></span>
+							    	Tamanho: 200 Mb
+								</div>
+							</a><!-- .botão download -->								
+                        </div>
+                        <!--.carousel-marca-->
+                    </div>
+                    <!--.container-->
+                </div>
+                <!--.item-->
+
+                <div class="item">
+                    <img class="slides" src="images/fundo2-slide-pagina-inicial.jpg" alt="Slide 2">
+                    <!--Slide imagem-->
+
+                    <div class="container">
+                        <div class="carousel-caption">
+
+                            <h1 class="animated bounceIn">Titulo slide 2 <br> --- </h1>
+
+                            <p class="lead animated bounceIn">Subtitulo / descrição.</p>
+                        </div>
+                        <!--.carousel-marca-->
+                    </div>
+                    <!--.container-->
+                </div>
+                <!--.item-->
+
+                <div class="item">
+                    <img class="slides" src="images/fundo3-slide-pagina-inicial.jpg" alt="Slide 3">
+                    <!--Slide imagem-->
+
+                    <div class="container">
+                        <div class="carousel-caption">
+
+                            <h1 class="animated bounceIn">Titulo slide 3 <br> --- </h1>
+
+                            <p class="lead animated bounceIn">Subtitulo / descrição.</p>
+                        </div>
+                        <!--.carousel-marca-->
+                    </div>
+                    <!--.container-->
+                </div>
+                <!--.item-->
+
+                <div class="item">
+                    <img class="slides" src="images/fundo4-slide-pagina-inicial.jpg" alt="Slide 4">
+                    <!--Slide imagem-->
+
+                    <div class="container">
+                        <div class="carousel-caption">
+
+                            <h1 class="animated bounceIn">Titulo slide 4 <br> --- </h1>
+
+                            <p class="lead animated bounceIn">Subtitulo / descrição.</p>
+
+                        </div>
+                        <!--.carousel-marca-->
+                    </div>
+                    <!--.container-->
+                </div>
+                <!--.item-->
+
+                <div class="item">
+                    <img class="slides" src="images/fundo5-slide-pagina-inicial.jpg" alt="Slide 5">
+                    <!--Slide imagem-->
+
+                    <div class="container">
+                        <div class="carousel-caption">
+
+                            <h1 class="animated bounceIn">Titulo slide 5 <br> --- </h1>
+
+                            <p class="lead animated bounceIn">Subtitulo / descrição.</p>
+                        </div>
+                        <!--.carousel-marca-->
+                    </div>
+                    <!--.container-->
+                </div>
+                <!--.item-->
+
+            </div>
+            <!--.carousel-interior-->
+
+            <!-- Controles -->
+            <a class="left carousel-control" href="#x-corp-carousel" role="button" data-slide="prev">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="right carousel-control" href="#x-corp-carousel" role="button" data-slide="next">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                <span class="sr-only">Próximo</span>
+            </a>
+            <!-- .Controles -->
+        </div>
+        <!-- .x-corp-carousel-->
 	<main>
 		<section class="descricao">
+			<!-- Resumo introduzindo a ideia do projeto -->
 			<div class="container">
 				<div class="description">
 					<h2>Lorem Ipsum</h2>
 					<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 				</div>
 			</div>
+			<!-- .Resumo introduzindo a ideia do projeto -->
 		</section>
 		<section class="sobre">
+			<!-- Caracteristicas do projeto -->
 			<div class="container">
 				<div class="itens">
+					<!-- Caracteristica 1 -->
 					<div class="item">
 						<div class="icone-docker">
 							<div class="icones"><i class="fab fa-docker"></i></div>
@@ -73,7 +306,9 @@
 						<h2>Lorem Ipsum</h2>
 						<p>"Lorem ipsum dolor sit amet, consectetur exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do."</p>
 					</div>
+					<!-- .Característica 1 -->
 
+					<!-- Caracteristica 2 -->
 					<div class="item">
 						<div class="icone-hand-spock">
 							<div class="icones"><i class="fas fa-american-sign-language-interpreting"></i></div>
@@ -81,7 +316,9 @@
 						<h2>Lorem Ipsum</h2>
 						<p>"Lorem ipsum dolor sit amet, consectetur exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do."</p>
 					</div>
-					
+					<!-- .Caracteristica 2 -->
+
+					<!-- Caracteristica 3 -->
 					<div class="item">
 						<div class="icone-sass">
 							<div class="icones"><i class="fab fa-sass"></i></div>
@@ -89,18 +326,20 @@
 						<h2>Lorem Ipsum</h2>
 						<p>"Lorem ipsum dolor sit amet, consectetur exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure do."</p>
 					</div>
+					<!-- .Caracteristica 3 -->
 				</div>
 			</div>
+			<!-- .Caracteristicas do projeto -->
 		</section>
 		<section class="cooperate">
+			<!-- Chamada para colaboração -->
 			<div class="colaborar">
-				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</br>incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non</br>proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</br></br><a class="botao-simples" href="#" class="botao medio">Colaborar</a></p>
-
-				
-				
+				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</br>incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non</br>proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</br></br><a class="botao-simples" href="#" class="botao medio">Colaborar</a></p>	
 			</div>
+			<!-- .Chamada para colaboração -->
 		</section>
 		<section class="s-media">
+			<!-- Mídias sociais -->
 			<div class="container">
 				<ul class="social-media">
 					<li>
@@ -120,22 +359,44 @@
 					</li>
 				</ul>
 			</div>
+			<!-- .Mídias sociais -->
 		</section>
-		
 	</main>
 	
 	<footer>
 		<div class="container">
+			<!-- Logo rodapé -->
 			<div class="logo-rodape">
 				<a href="index.html">
 					<img src="images/logo-libras-office-rodape.svg" alt="LIBRAS Office">
 				</a>
 			</div>
-
+			<!-- .logo rodapé -->
+			<!-- Créditos e licenças -->
 			<div class="textos">
 				<p><strong>Impressum (Legal Info) | Privacy Policy (Datenschutzerklärung) </strong>| <strong>Statutes (non-binding English translation) - Satzung (binding German version) </strong>| Copyright information: Unless otherwise specified, all text and images on this website are licensed under the Creative Commons Attribution-Share Alike 3.0 License. This does not include the source code of LibreOffice, which is licensed under the <strong>Mozilla Public License v2.0.</strong> “LibreOffice” and “The Document Foundation” are registered trademarks of their corresponding registered owners or are in actual use as trademarks in one or more countries.</p>
 			</div>
+			<!-- .Créditos e licenças -->
 		</div>
 	</footer>
+
+	<!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- wow.min.js CHECAR-->
+    <script src="js/wow.min.js"></script>
+    <!-- owl-carousel -->
+    <script src="owl-carousel/owl.carousel.min.js"></script>
+    <!-- smoothscroll CHECAR-->
+    <script src="js/smoothscroll.js"></script>
+	<!-- Offcanvas Menu -->
+	<script src="js/hippo-offcanvas.js"></script>
+    <!-- Scrolling Nav JavaScript CHECAR-->
+    <script src="js/jquery.easing.min.js"></script>
+	<!-- Shuffle.min js CHECAR-->
+	<script src="js/jquery.shuffle.min.js"></script>
+    <!-- Custom Script CHECAR-->
+    <script src="js/scripts.js"></script>
 </body>
 </html>

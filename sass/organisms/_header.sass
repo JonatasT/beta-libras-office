@@ -1,63 +1,47 @@
 header
 	+clearfix
-	min-height: 805px
+	min-height: 90px;
+
+	font-family: "Roboto", sans-serif !important
+    font-weight: 400
+    font-size: 14px
+    line-height: 24px
+    -webkit-font-smoothing: antialiased !important
+
+	//Link style 
+	a
+		color: $gold
+		text-decoration: none
+	    transition: all 0.3s ease 0s
+	
+	a,
+	a:active,
+	a:focus,
+	a:active
+	    text-decoration: none !important
+	    outline: none
+
+	a:hover,
+	a:focus
+	    color: $gold-foco
+	    text-decoration: none !important
+
 
 
 	//Logo do LIBRAS Office				*De preferencia SVG pra manipulação de cenas de rearranjo
 	.logo
 		position: fixed
 		float: left
-		//margin: 32px 0 0
+		margin: 32px 0 0
 		margin: -6px 0 0  
 
 		img
 			width: 219px
-			heigth: 103px
-	
 
 
-
-	//Barra de navegação
-	.navigation
-		height: 90px		!important
-		width: 100%
-
-		background: $laranja
-		position: fixed 		
-		right: 0 				//mantem a navbar no top enquando scrolling
-		
-		padding: 35px 30px 0  	//otimização de resolução para dispositivos móveis
-		+breakpoint($tablet)
-			display: none
-		+breakpoint($celular)
-			display: none
-	
-
-
-	//Configurações gerais barra de navegação
-	nav
-		ul
-			li
-				display: inline-block
-				margin: 0 22px 0 0
-
-				float: right
-
-				a
-					color: $branco
-					text-transform: none
-					
-					+transition(.5s)
-					&:hover,
-					&:focus
-						text-decoration: none 	!important
-						color: $amarelo
-	
-
-	//Títulos
+	//Títulos//
 	h1
 		clear: both
-		margin: 415px 0 7px		!important
 		text-transform: uppercase
 		font-size: 47px
 		color: $branco
@@ -65,7 +49,7 @@ header
 			+font-size(60px) 
 
 
-	//Parágrafos
+	//Parágrafos//
 	p
 		margin: 0 0 54px
 		font-size: 25px
@@ -73,3 +57,1665 @@ header
 		color: $branco 						//$cinza-medio
 		+breakpoint($celular)
 			+font-size(35px)
+
+
+
+	//Navigation//
+	@media(min-width:767px)
+	    .navbar 
+	        padding: 20px 0
+	        border-bottom: 0
+	        background-color: $laranja
+	        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out
+	        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out
+	        transition: background .5s ease-in-out,padding .5s ease-in-out
+	   
+
+	    /*for IE9 fallback background color*/
+	    .no-csstransitions .navbar-default
+	        background: $laranja
+	    
+	    .collapse .navbar-collapse .navbar-collapse
+	        padding: 0
+	        background-color: $azul !important
+	    
+
+
+	@media(max-width:767px)
+	    .navbar-default 
+	        background: $laranja    //fundo toggle menu
+	        border-color: $laranja
+	    
+
+
+	.navbar-default .navbar-nav
+		li
+			a
+			    color: $branco
+			    text-transform: capitalize
+			    font-size: 14px
+			    line-height: 24px
+			    font-weight: 500
+
+
+	.navbar-default .navbar-nav
+		li
+			a
+				&:hover,
+				&:focus
+					color: $gold
+					background-color: transparent
+
+
+	.navbar-default .navbar-nav>.active>a, 
+	.navbar-default .navbar-nav>.active>a:hover, 
+	.navbar-default .navbar-nav>.active>a:focus,
+	.navbar-default .navbar-nav>.open>a, 
+	.navbar-default .navbar-nav>.open>a:hover, 
+	.navbar-default .navbar-nav>.open>a:focus
+	    color: $gold
+	    background-color: transparent
+
+
+
+
+	/*RESPONSIVE TOGGLE BUTTON*/
+	.navbar-default .navbar-toggle
+	    border: 2px solid $branco
+	    border-radius: 2px
+	    padding: 7px
+	    -webkit-transition: all 300ms
+	    -moz-transition: all 300ms
+	    -o-transition: all 300ms
+	    transition: all 300ms
+
+
+	.navbar-default .navbar-toggle:hover, 
+	.navbar-default .navbar-toggle:focus 
+	    background-color: $laranja
+	    border: 2px solid transparent
+
+
+	.navbar-default .navbar-toggle .icon-bar
+	    background-color: $branco
+	    width: 20px
+	    
+
+	.content-wrapper
+	    position: relative
+	    top: -120px
+	    border: 3px solid #e3e3e3
+	    border-radius: 5px
+	    background: $branco
+	    z-index: 100
+
+
+	/*CSS TAB*/
+	.nav-tabs
+	    border-bottom: 0
+	    background: rgba(255, 255, 255, 0.1)
+	    display: inline-block
+	    padding: 5px 7px
+	    border-radius: 3px
+
+
+	.nav-tabs
+		li
+			a
+			    padding: 8px 20px
+			    line-height: normal
+			    border: 0
+			    font-size: 18px
+			    font-weight: 700
+			    color: $branco
+			    border-radius: 3px
+
+
+	.nav-tabs
+		li.active
+			a
+			    border: 0
+			    color: $branco
+			    margin-bottom: 0
+
+
+
+	.nav-tabs > li > a:hover,
+	.nav-tabs > li.active > a, 
+	.nav-tabs > li.active > a:hover, 
+	.nav-tabs > li.active > a:focus
+	    color: $branco
+	    background: $gold
+	    border: 0
+
+
+
+	.tab-content
+	    padding: 0
+	    margin: 70px 0 0
+	    color: $branco
+
+	.tab-content h3
+	    font-weight: 700
+	    color: $branco
+
+
+	.css-tab .media-left
+		img
+		    margin-right: 20px
+		    border-radius: 4px
+		    width: inherit
+
+	.css-tab .media-heading
+	    margin-bottom: 15px
+
+
+	/*Sidebar Tab*/
+	.sidebar-tab .nav-tabs
+		li
+			a
+			    font-size: 14px
+			    font-weight: 400
+			    padding: 8px 10px
+			    border: 0
+
+
+	.sidebar-tab .nav-tabs
+	    border-bottom: 1px solid #e3e3e3
+	    border-radius: 0
+
+	.sidebar-tab 
+		ul.nav-tabs
+			li
+	    		border-bottom: 0
+
+
+	.sidebar-tab .tab-content
+	    margin: 15px 0 0
+
+	.sidebar-tab .nav-tabs 
+		li:first-child 
+			a:after
+			    content: "|"
+			    position: absolute
+			    right: 0
+			    color: #e3e3e3
+
+
+	.sidebar-tab .nav-tabs > li > a:hover, 
+	.sidebar-tab .nav-tabs > li.active > a, 
+	.sidebar-tab .nav-tabs > li.active > a:hover, 
+	.sidebar-tab .nav-tabs > li.active > a:focus
+	    background: transparent
+	    color: #e3e3e3
+	    border: 0
+
+
+	//Of canvas//
+	.hippo-offcanvas-container
+		background: #27272C
+	
+	.hippo-offcanvas-pusher::after
+		z-index: 1200
+	
+	.offcanvas-menu
+		left: -1000px
+	
+	#off-canvas-close-btn
+		padding: 0px 20px
+		background: rgba(0, 0, 0, 0.3)
+		color: $branco
+		height: 62px
+		text-shadow: none
+		opacity: 1
+	
+	#off-canvas-close-btn:hover,
+	#off-canvas-close-btn:focus
+		color: $gold
+		outline: none
+	
+	.offcanvas-menu  h3
+		text-transform: uppercase
+		color: $branco
+		font-weight: 500
+		background: rgba(0, 0, 0, 0.25)
+		padding: 1em 1em 1em 1.2em
+	
+
+	.offcanvas-menu
+		ul 
+			li 
+				a
+					display: block
+					padding: 1em 1em 1em 1.2em
+					color: $branco
+					text-transform: uppercase
+					letter-spacing: 1px
+					font-size: 16px
+					font-weight: 500
+					box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2)
+	
+
+	.offcanvas-menu
+		ul 
+			li 
+				li 
+					a
+					    font-size: 12px
+					    font-weight: 400
+					    padding-left: 30px
+	
+
+	.offcanvas-menu
+		ul
+			li:first-child
+				a
+
+
+	.offcanvas-menu ul li a:hover,
+	.offcanvas-menu ul li.active a
+	    background: rgba(0, 0, 0, 0.2)
+	    box-shadow: inset 0 -1px rgba(0,0,0,0.03)
+	    color: $gold
+
+
+	//Dropdown//
+	.dropdown-menu
+	    border: 0
+	    border-radius: 0
+	    position: relative
+	    display: block
+	    float: none
+	    width: 100%
+	    box-shadow: none
+	    background: $laranja
+	
+
+	.nav.navbar-nav li ul.dropdown-menu li a
+	    padding: 7px 20px
+	    font-size: 13px
+	    color: $branco
+	    line-height: 20px 
+	    text-transform: capitalize
+
+	.nav.navbar-nav li ul.dropdown-menu li a:hover,
+	.nav.navbar-nav li ul.dropdown-menu li a:focus
+	    background: transparent; 
+	    color: $gold
+
+
+	.dropdown-menu>.active>a, 
+	.dropdown-menu>.active>a:hover, 
+	.dropdown-menu>.active>a:focus
+	    color: $gold !important
+	    background-color: transparent
+
+
+	/* Menu hover */
+
+	/* 2nd label menu */
+
+	li.dropdown > .submenu-wrapper
+	    position: absolute
+	    display: block
+	    left: 0
+	    z-index: 999
+	    pointer-events: none
+	    top: 38px // Vai mudar o tema específico
+
+
+	/** IE pointer events */
+
+	li.dropdown > .submenu-wrapper.no-pointer-events
+	    display: none
+	
+
+	li.dropdown > .submenu-wrapper > .submenu-inner
+	    margin-top: 16px
+	    opacity: 0;
+	    filter: alpha(opacity=0) // For IE8 and earlier
+
+	    -webkit-transform: translateY(-100%)
+	    -moz-transform: translateY(-100%)
+	    -ms-transform: translateY(-100%)
+	    -o-transform: translateY(-100%)
+	    transform: translateY(-100%)
+
+	    /* Will change on theme specific */
+
+	    min-width: 200px
+
+	    -webkit-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
+	    -moz-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
+	    -ms-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
+	    -o-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
+	    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
+	
+
+	/*for IE9*/
+	.ie9 li.dropdown > .submenu-wrapper > .submenu-inner
+	    margin-top: 34px
+	
+
+	/*for IE9*/
+	.ie9 .top-nav-collapse li.dropdown > .submenu-wrapper > .submenu-inner
+	    margin-top: 14px
+
+
+	li.dropdown:hover > .submenu-wrapper
+	    pointer-events: auto
+	
+
+	li.dropdown:hover > .submenu-wrapper.no-pointer-events
+	    display: block
+	    
+
+	li.dropdown:hover > .submenu-wrapper > .submenu-inner
+	    opacity: 1
+	    filter: alpha(opacity=100) // For IE8 and earlier */
+	    -webkit-transform: translateY(0)
+	    -moz-transform: translateY(0)
+	    -ms-transform: translateY(0)
+	    -o-transform: translateY(0)
+	    transform: translateY(0)
+
+
+	li.dropdown.menu-animating > .submenu-wrapper
+	    overflow: hidden
+
+	/* 3rd label menu */
+
+	li.dropdown > .submenu-sub-wrapper
+	    position: absolute
+	    left: 100%
+	    top: 0
+	    display: block
+	    z-index: 1000
+	    width: 100%
+	    pointer-events: none
+
+	li.dropdown > .submenu-sub-wrapper > .submenu-sub-inner
+	    opacity: 0
+	    filter: alpha(opacity=0) // For IE8 and earlier */
+
+	    -webkit-transform: translateX(-100%)
+	    -moz-transform: translateX(-100%)
+	    -ms-transform: translateX(-100%)
+	    -o-transform: translateX(-100%)
+	    transform: translateX(-100%)
+
+	    -webkit-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
+	    -moz-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
+	    -ms-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
+	    -o-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
+	    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
+
+
+	li.dropdown:hover > .submenu-sub-wrapper
+	    pointer-events: auto
+	
+
+	li.dropdown:hover > .submenu-sub-wrapper > .submenu-sub-inner 
+	    opacity: 1
+	    filter: alpha(opacity=100) // For IE8 and earlier */
+	    -webkit-transform: translateX(0)
+	    -moz-transform: translateX(0)
+	    -ms-transform: translateX(0)
+	    -o-transform: translateX(0)
+	    transform: translateX(0)
+	
+
+	li.dropdown.menu-animating > .submenu-sub-wrapper
+	    overflow: hidden
+	
+
+	
+	//Offcanvas Style//
+	.hippo-offcanvas-container
+		background: #27272C
+	
+	.hippo-offcanvas-pusher::after
+		z-index: 1200
+	
+	.offcanvas-menu
+		left: -1000px
+	
+	#off-canvas-close-btn
+		padding: 0px 20px
+		background: rgba(0, 0, 0, 0.3)
+		color: $branco
+		height: 62px
+		text-shadow: none
+		opacity: 1
+	
+	#off-canvas-close-btn:hover,
+	#off-canvas-close-btn:focus
+		color: #fcbb3c
+		outline: none
+	
+	.offcanvas-menu
+		h3
+			text-transform: uppercase
+			color: $branco
+			font-weight: 500
+			background: rgba(0, 0, 0, 0.25)
+			padding: 1em 1em 1em 1.2em
+	
+
+	.offcanvas-menu
+		ul
+			li
+				a
+					display: block
+					padding: 1em 1em 1em 1.2em
+					color: $branco
+					text-transform: uppercase
+					letter-spacing: 1px
+					font-size: 16px
+					font-weight: 500
+					box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2)
+	
+
+	.offcanvas-menu
+		ul
+			li
+				a 
+					color: $laranja		
+				li
+					a
+					    font-size: 12px
+					    font-weight: 400
+					    padding-left: 30px
+
+	.offcanvas-menu
+		ul
+			li:first-child
+				a 
+
+	
+
+
+	.offcanvas-menu ul li a:hover,
+	.offcanvas-menu ul li.active a 
+	    background: $laranja
+	    box-shadow: inset 0 -1px $laranja
+	    color: $branco
+	
+
+	//CANVAS MENU
+
+
+
+	//Hippo Offcanvas . styling: selectors .hippo-offcanvas-contents
+	.hippo-offcanvas-wrapper,
+	.hippo-offcanvas-pusher,
+	.hippo-offcanvas-contents
+	    height: 100%
+	
+
+	.hippo-offcanvas-contents
+	    overflow-y: scroll
+	   	background: $branco
+	
+
+	.hippo-offcanvas-open .hippo-offcanvas-contents,
+	.hippo-offcanvas-open .hippo-offcanvas-contents-inner
+
+
+
+	.hippo-offcanvas-html-open, .hippo-offcanvas-body-open
+	    height: 100%
+
+	.hippo-offcanvas-contents,
+	.hippo-offcanvas-contents-inner
+	    position: relative
+
+
+	.hippo-offcanvas-wrapper
+	    position: relative
+	    overflow: hidden
+	
+
+	.hippo-offcanvas-pusher
+	    position: relative
+	    left: 0
+	    z-index: 99
+	    height: 100%
+	    -webkit-transition: -webkit-transform 0.5s
+	    -moz-transition: -moz-transform 0.5s
+	    -ms-transition: -ms-transform 0.5s
+	    -o-transition: -o-transform 0.5s
+	    transition: transform 0.5s
+	
+
+	.hippo-offcanvas-pusher
+		&:after
+		    position: absolute
+		    top: 0
+		    right: 0
+		    width: 0
+		    height: 0
+		    background: rgba(0, 0, 0, 0.5)
+		    content: ''
+		    opacity: 0
+		    -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s
+		    -moz-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s
+		    -o-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s
+		    transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s
+	    	z-index: 999
+	
+
+	.hippo-offcanvas-open .hippo-offcanvas-pusher
+		&:after
+		    width: 100%
+		    height: 100%
+		    opacity: 1
+		    -webkit-transition: opacity 0.5s
+		    -moz-transition: opacity 0.5s
+		    -o-transition: opacity 0.5s
+		    transition: opacity 0.5s
+	
+
+	.hippo-offcanvas-container
+	    position: absolute
+	    top: 0
+	    left: 0
+	    z-index: 100
+	    visibility: hidden
+	    width: 300px
+	    height: 100%
+	    background: #27272C // Vai mudar
+	    -webkit-transition: all 0.5s
+	    -moz-transition: all 0.5s
+	    -o-transition: all 0.5s
+	    transition: all 0.5s
+	
+
+	.hippo-offcanvas-container
+		&:after
+		    position: absolute
+		    top: 0
+		    right: 0
+		    width: 100%
+		    height: 100%
+		    background: rgba(0, 0, 0, 0.5)
+		    content: ''
+		    opacity: 1
+		    -webkit-transition: opacity 0.5s
+		    -moz-transition: opacity 0.5s
+		    -o-transition: opacity 0.5s
+		    transition: opacity 0.5s
+	
+
+	.hippo-offcanvas-open .hippo-offcanvas-container
+		&:after
+		    width: 0
+		    height: 0
+		    opacity: 0
+		    -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s
+		    -moz-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s
+		    -o-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s
+		    transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s
+	
+
+	.hippo-offcanvas-container > div
+	    overflow-y: scroll
+	    overflow-x: hidden
+	    height: calc(100% - 45px)
+
+	
+
+	.hippo-offcanvas-container > div > div
+	    visibility: visible
+	
+
+	.hippo-offcanvas-left .hippo-offcanvas-container
+	    left: 0
+	
+
+	.hippo-offcanvas-right .hippo-offcanvas-container
+	    left: auto
+	    right: 0
+	
+
+	//Efeitos individuais
+
+	//Efeito 1: Slide no topo . Nome: slide-in-on-top
+
+	.hippo-offcanvas-left.slide-in-on-top.hippo-offcanvas-open .hippo-offcanvas-container,
+	.hippo-offcanvas-right.slide-in-on-top.hippo-offcanvas-open .hippo-offcanvas-container
+	    visibility: visible
+	    -webkit-transform: translate3d(0, 0, 0)
+	    -moz-transform: translate3d(0, 0, 0)
+	    -ms-transform: translate(0, 0)
+	    -o-transform: translate3d(0, 0, 0)
+	    transform: translate3d(0, 0, 0)
+	
+
+	.hippo-offcanvas-left.slide-in-on-top .hippo-offcanvas-container
+	    -webkit-transform: translate3d(-100%, 0, 0)
+	    -moz-transform: translate3d(-100%, 0, 0)
+	    -ms-transform: translate(-100%, 0)
+	    -o-transform: translate3d(-100%, 0, 0)
+	    transform: translate3d(-100%, 0, 0)
+	
+
+	.hippo-offcanvas-right.slide-in-on-top .hippo-offcanvas-container
+	    -webkit-transform: translate3d(100%, 0, 0)
+	    -moz-transform: translate3d(100%, 0, 0)
+	    -ms-transform: translate(100%, 0)
+	    -o-transform: translate3d(100%, 0, 0)
+	    transform: translate3d(100%, 0, 0)
+	
+
+	.slide-in-on-top .hippo-offcanvas-container
+		&:after
+	    	display: none
+	
+
+	// Efeito 2: Reveal : done
+
+	.hippo-offcanvas-left.reveal.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(300px, 0, 0)
+	    -moz-transform: translate3d(300px, 0, 0)
+	    -ms-transform: translate(300px, 0)
+	    -o-transform: translate3d(300px, 0, 0)
+	    transform: translate3d(300px, 0, 0)
+	
+
+	.hippo-offcanvas-right.reveal.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(-300px, 0, 0)
+	    -moz-transform: translate3d(-300px, 0, 0)
+	    -ms-transform: translate(-300px, 0)
+	    -o-transform: translate3d(-300px, 0, 0)
+	    transform: translate3d(-300px, 0, 0)
+	
+
+	.reveal .hippo-offcanvas-container
+	    z-index: 0
+	    visibility: hidden
+	    opacity: 0
+	
+
+	.reveal.hippo-offcanvas-open .hippo-offcanvas-container
+	    z-index: 1
+	    visibility: visible
+	    opacity: 1
+	    -webkit-transition: -webkit-transform 0.5s
+	    -moz-transition: -moz-transform 0.5s
+	    -ms-transition: -ms-transform 0.5s
+	    -o-transition: -o-transform 0.5s
+	    transition: transform 0.5s
+	
+
+	.reveal .hippo-offcanvas-container
+		&:after
+	    	display: none
+	
+
+	// Efeito 3: Push done
+	.hippo-offcanvas-left.push-down.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(300px, 0, 0)
+	    -moz-transform: translate3d(300px, 0, 0)
+	    -ms-transform: translate(300px, 0)
+	    -o-transform: translate3d(300px, 0, 0)
+	    transform: translate3d(300px, 0, 0)
+	
+
+	.hippo-offcanvas-right.push-down.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(-300px, 0, 0)
+	    -moz-transform: translate3d(-300px, 0, 0)
+	    -ms-transform: translate(-300px, 0)
+	    -o-transform: translate3d(-300px, 0, 0)
+	    transform: translate3d(-300px, 0, 0)
+	
+
+	.hippo-offcanvas-left.push-down .hippo-offcanvas-container
+	    -webkit-transform: translate3d(-100%, 0, 0)
+	    -moz-transform: translate3d(-100%, 0, 0)
+	    -ms-transform: translate(-100%, 0)
+	    -o-transform: translate3d(-100%, 0, 0)
+	    transform: translate3d(-100%, 0, 0)
+	
+
+	.hippo-offcanvas-right.push-down .hippo-offcanvas-container
+	    -webkit-transform: translate3d(100%, 0, 0)
+	    -moz-transform: translate3d(100%, 0, 0)
+	    -ms-transform: translate(100%, 0)
+	    -o-transform: translate3d(100%, 0, 0)
+	    transform: translate3d(100%, 0, 0)
+	
+
+	.push-down.hippo-offcanvas-open .hippo-offcanvas-container
+	    visibility: visible
+	    -webkit-transition: -webkit-transform 0.5s
+	    -moz-transition: -moz-transform 0.5s
+	    -ms-transition: -ms-transform 0.5s
+	    -o-transition: -o-transform 0.5s
+	    transition: transform 0.5s
+	
+
+	.push-down .hippo-offcanvas-container
+		&:after
+	    	display: none
+	
+
+	// Efeito 4: Slide along : done
+
+	.hippo-offcanvas-left.slide-along.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(300px, 0, 0)
+	    -moz-transform: translate3d(300px, 0, 0)
+	    -ms-transform: translate(300px, 0, 0)
+	    -o-transform: translate3d(300px, 0, 0)
+	    transform: translate3d(300px, 0, 0)
+	
+
+	.hippo-offcanvas-right.slide-along.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(-300px, 0, 0)
+	    -moz-transform: translate3d(-300px, 0, 0)
+	    -ms-transform: translate(-300px, 0)
+	    -o-transform: translate3d(-300px, 0, 0)
+	    transform: translate3d(-300px, 0, 0)
+	
+
+	.hippo-offcanvas-left.slide-along .hippo-offcanvas-container
+	    z-index: 1
+	    -webkit-transform: translate3d(-50%, 0, 0)
+	    -moz-transform: translate3d(-50%, 0, 0)
+	    -ms-transform: translate(-50%, 0)
+	    -o-transform: translate3d(-50%, 0, 0)
+	    transform: translate3d(-50%, 0, 0)
+	
+
+	.hippo-offcanvas-right.slide-along .hippo-offcanvas-container
+	    z-index: 1
+	    -webkit-transform: translate3d(50%, 0, 0)
+	    -moz-transform: translate3d(50%, 0, 0)
+	    -ms-transform: translate(50%, 0)
+	    -o-transform: translate3d(50%, 0, 0)
+	    transform: translate3d(50%, 0, 0)
+
+
+	.slide-along.hippo-offcanvas-open .hippo-offcanvas-container
+	    visibility: visible
+	    -webkit-transition: -webkit-transform 0.5s
+	    -moz-transition: -webkit-transform 0.5s
+	    -ms-transition: -webkit-transform 0.5s
+	    -o-transition: -webkit-transform 0.5s
+	    transition: transform 0.5s
+	    -webkit-transform: translate3d(0, 0, 0)
+	    -moz-transform: translate3d(0, 0, 0)
+	    -ms-transform: translate(0, 0)
+	    -o-transform: translate3d(0, 0, 0)
+	    transform: translate3d(0, 0, 0)
+	
+
+	.slide-along .hippo-offcanvas-container
+		&:after
+	    	display: none
+
+
+	// Efeito 5: Reverse slide out  done
+	.hippo-offcanvas-left.reverse-slide-out.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(300px, 0, 0)
+	    -moz-transform: translate3d(300px, 0, 0)
+	    -ms-transform: translate(300px, 0)
+	    -o-transform: translate3d(300px, 0, 0)
+	    transform: translate3d(300px, 0, 0)
+	
+
+	.hippo-offcanvas-right.reverse-slide-out.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(-300px, 0, 0)
+	    -moz-transform: translate3d(-300px, 0, 0)
+	    -ms-transform: translate(-300px, 0)
+	    -o-transform: translate3d(-300px, 0, 0)
+	    transform: translate3d(-300px, 0, 0)
+	
+
+	.hippo-offcanvas-left.reverse-slide-out .hippo-offcanvas-container
+	    z-index: 1
+	    -webkit-transform: translate3d(50%, 0, 0)
+	    -moz-transform: translate3d(50%, 0, 0)
+	    -ms-transform: translate(50%, 0)
+	    -o-transform: translate3d(50%, 0, 0)
+	    transform: translate3d(50%, 0, 0)
+	
+
+	.hippo-offcanvas-right.reverse-slide-out .hippo-offcanvas-container
+	    z-index: 1
+	    -webkit-transform: translate3d(-50%, 0, 0)
+	    -moz-transform: translate3d(-50%, 0, 0)
+	    -ms-transform: translate(-50%, 0)
+	    -o-transform: translate3d(-50%, 0, 0)
+	    transform: translate3d(-50%, 0, 0)
+	
+
+	.reverse-slide-out.hippo-offcanvas-open .hippo-offcanvas-container
+	    visibility: visible
+	    -webkit-transition: -webkit-transform 0.5s
+	    -moz-transition: -moz-transform 0.5s
+	    -ms-transition: -ms-transform 0.5s
+	    -o-transition: -o-transform 0.5s
+	    transition: transform 0.5s
+	    -webkit-transform: translate3d(0, 0, 0)
+	    -moz-transform: translate3d(0, 0, 0)
+	    -ms-transform: translate(0, 0)
+	    -o-transform: translate3d(0, 0, 0)
+	    transform: translate3d(0, 0, 0)
+	
+
+	// Efeito 6: Rotate pusher   done
+
+	.rotate-pusher.hippo-offcanvas-wrapper
+	    -webkit-perspective: 1500px
+	    -moz-perspective: 1500px
+	    -ms-perspective: 1500px
+	    -o-perspective: 1500px
+	    perspective: 1500px
+	
+
+	.hippo-offcanvas-left.rotate-pusher .hippo-offcanvas-pusher
+	    -webkit-transform-origin: 0% 50%
+	    -moz-transform-origin: 0% 50%
+	    -ms-transform-origin: 0% 50%
+	    -o-transform-origin: 0% 50%
+	    transform-origin: 0% 50%
+	    -webkit-perspective: 1200px
+	    -moz-perspective: 1200px
+	    -ms-perspective: 1200px
+	    -o-perspective: 1200px
+	    perspective: 1200px
+
+
+	.hippo-offcanvas-right.rotate-pusher .hippo-offcanvas-pusher
+	    -webkit-transform-origin: 100% 50%
+	    -moz-transform-origin: 100% 50%
+	    -ms-transform-origin: 100% 50%
+	    -o-transform-origin: 100% 50%
+	    transform-origin: 100% 50%
+
+	    -webkit-perspective: 1200px
+	    -moz-perspective: 1200px
+	    -ms-perspective: 1200px
+	    -o-perspective: 1200px
+	    perspective: 1200px
+
+
+	.hippo-offcanvas-left.rotate-pusher.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(300px, 0, 0) rotateY(-15deg)
+	    -moz-transform: translate3d(300px, 0, 0) rotateY(-15deg)
+	    -ms-transform: translate3d(300px, 0, 0) rotateY(-15deg)
+	    -o-transform: translate3d(300px, 0, 0) rotateY(-15deg)
+	    transform: translate3d(300px, 0, 0) rotateY(-15deg)
+	
+
+	.hippo-offcanvas-right.rotate-pusher.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(-300px, 0, 0) rotateY(15deg)
+	    -moz-transform: translate3d(-300px, 0, 0) rotateY(15deg)
+	    -ms-transform: translate3d(-300px, 0, 0) rotateY(15deg)
+	    -o-transform: translate3d(-300px, 0, 0) rotateY(15deg)
+	    transform: translate3d(-300px, 0, 0) rotateY(15deg)
+	
+
+	.hippo-offcanvas-left.rotate-pusher .hippo-offcanvas-container
+	    -webkit-transform: translate3d(-100%, 0, 0)
+	    -moz-transform: translate3d(-100%, 0, 0)
+	    -ms-transform: translate(-100%, 0)
+	    -o-transform: translate3d(-100%, 0, 0)
+	    transform: translate3d(-100%, 0, 0)
+	    -webkit-transform-origin: 100%
+	    -moz-transform-origin: 100%
+	    -ms-transform-origin: 100%
+	    -o-transform-origin: 100%
+	    transform-origin: 100%
+	    -webkit-transform-style: preserve-3d
+	    -moz-transform-style: preserve-3d
+	    -ms-transform-style: preserve-3d
+	    -o-transform-style: preserve-3d
+	    transform-style: preserve-3d
+	
+
+	.hippo-offcanvas-right.rotate-pusher .hippo-offcanvas-container
+	    -webkit-transform: translate3d(100%, 0, 0)
+	    -moz-transform: translate3d(100%, 0, 0)
+	    -ms-transform: translate(100%, 0)
+	    -o-transform: translate3d(100%, 0, 0)
+	    transform: translate3d(100%, 0, 0)
+	    -webkit-transform-origin: 0%
+	    -moz-transform-origin: 0%
+	    -ms-transform-origin: 0%
+	    -o-transform-origin: 0%
+	    transform-origin: 0%
+	    -webkit-transform-style: preserve-3d
+	    -moz-transform-style: preserve-3d
+	    -ms-transform-style: preserve-3d
+	    -o-transform-style: preserve-3d
+	    transform-style: preserve-3d
+	
+
+	.hippo-offcanvas-left.rotate-pusher.hippo-offcanvas-open .hippo-offcanvas-container
+	    visibility: visible
+	    -webkit-transform: translate3d(-100%, 0, 0) rotateY(15deg)
+	    -moz-transform: translate3d(-100%, 0, 0) rotateY(15deg)
+	    -ms-transform: translate3d(-100%, 0, 0) rotateY(15deg)
+	    -o-transform: translate3d(-100%, 0, 0) rotateY(15deg)
+	    transform: translate3d(-100%, 0, 0) rotateY(15deg)
+	
+
+	.hippo-offcanvas-right.rotate-pusher.hippo-offcanvas-open .hippo-offcanvas-container
+	    visibility: visible
+
+	    -webkit-transform: translate3d(100%, 0, 0) rotateY(-15deg)
+	    -moz-transform: translate3d(100%, 0, 0) rotateY(-15deg)
+	    -ms-transform: translate3d(100%, 0, 0) rotateY(-15deg)
+	    -o-transform: translate3d(100%, 0, 0) rotateY(-15deg)
+	    transform: translate3d(100%, 0, 0) rotateY(-15deg)
+	
+
+	.rotate-pusher .hippo-offcanvas-container
+		&:after
+	    	display: none
+	
+
+	// Efeito  7: 3D rotate in done
+	.hippo-offcanvas-left.three-d-rotate-in.hippo-offcanvas-wrapper
+	    -webkit-perspective: 1500px
+	    -moz-perspective: 1500px
+	    -ms-perspective: 1500px
+	    -o-perspective: 1500px
+	    perspective: 1500px
+	    -webkit-perspective-origin: 0% 50%
+	    -mos-perspective-origin: 0% 50%
+	    -ms-perspective-origin: 0% 50%
+	    -o-perspective-origin: 0% 50%
+	    perspective-origin: 0% 50%
+	
+
+	.hippo-offcanvas-right.three-d-rotate-in.hippo-offcanvas-wrapper
+	    -webkit-perspective: 1500px
+	    -moz-perspective: 1500px
+	    -ms-perspective: 1500px
+	    -o-perspective: 1500px
+	    perspective: 1500px
+	    -webkit-perspective-origin: 100% 50%
+	    -moz-perspective-origin: 100% 50%
+	    -ms-perspective-origin: 100% 50%
+	    -o-perspective-origin: 100% 50%
+	    perspective-origin: 100% 50%
+	
+
+	.three-d-rotate-in .hippo-offcanvas-pusher
+	    -webkit-transform-style: preserve-3d
+	    -moz-transform-style: preserve-3d
+	    -ms-transform-style: preserve-3d
+	    -o-transform-style: preserve-3d
+	    transform-style: preserve-3d
+	
+
+	.hippo-offcanvas-left.three-d-rotate-in.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(300px, 0, 0)
+	    -moz-transform: translate3d(300px, 0, 0)
+	    -ms-transform: translate(300px, 0)
+	    -o-transform: translate3d(300px, 0, 0)
+	    transform: translate3d(300px, 0, 0)
+	
+
+	.hippo-offcanvas-right.three-d-rotate-in.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(-300px, 0, 0)
+	    -moz-transform: translate3d(-300px, 0, 0)
+	    -ms-transform: translate(-300px, 0)
+	    -o-transform: translate3d(-300px, 0, 0)
+	    transform: translate3d(-300px, 0, 0)
+	
+
+	.hippo-offcanvas-left.three-d-rotate-in .hippo-offcanvas-container
+	    -webkit-transform: translate3d(-100%, 0, 0) rotateY(-90deg)
+	    -moz-transform: translate3d(-100%, 0, 0) rotateY(-90deg)
+	    -ms-transform: translate(-100%, 0) rotateY(-90deg)
+	    -o-transform: translate3d(-100%, 0, 0) rotateY(-90deg)
+	    transform: translate3d(-100%, 0, 0) rotateY(-90deg)
+	    -webkit-transform-origin: 100% 50%
+	    -moz-transform-origin: 100% 50%
+	    -ms-transform-origin: 100% 50%
+	    -o-transform-origin: 100% 50%
+	    transform-origin: 100% 50%
+
+
+	.hippo-offcanvas-right.three-d-rotate-in .hippo-offcanvas-container
+	    -webkit-transform: translate3d(100%, 0, 0) rotateY(90deg)
+	    -moz-transform: translate3d(100%, 0, 0) rotateY(90deg)
+	    -ms-transform: translate(100%, 0) rotateY(90deg)
+	    -o-transform: translate3d(100%, 0, 0) rotateY(90deg)
+	    transform: translate3d(100%, 0, 0) rotateY(90deg)
+	    -webkit-transform-origin: 0% 50%
+	    -moz-transform-origin: 0% 50%
+	    -ms-transform-origin: 0% 50%
+	    -o-transform-origin: 0% 50%
+	    transform-origin: 0% 50%
+
+
+	.hippo-offcanvas-left.three-d-rotate-in.hippo-offcanvas-open .hippo-offcanvas-container
+	    visibility: visible
+	    -webkit-transition: -webkit-transform 0.5s
+	    -moz-transition: -moz-transform 0.5s
+	    -ms-transition: -ms-transform 0.5s
+	    -o-transition: -o-transform 0.5s
+	    transition: transform 0.5s
+	    -webkit-transform: translate3d(-100%, 0, 0) rotateY(0deg)
+	    -mos-transform: translate3d(-100%, 0, 0) rotateY(0deg)
+	    -ms-transform: translate(-100%, 0) rotateY(0deg)
+	    -o-transform: translate3d(-100%, 0, 0) rotateY(0deg)
+	    transform: translate3d(-100%, 0, 0) rotateY(0deg)
+	
+
+	.hippo-offcanvas-right.three-d-rotate-in.hippo-offcanvas-open .hippo-offcanvas-container
+	    visibility: visible
+	    -webkit-transition: -webkit-transform 0.5s
+	    -moz-transition: -moz-transform 0.5s
+	    -ms-transition: -ms-transform 0.5s
+	    -o-transition: -o-transform 0.5s
+	    transition: transform 0.5s
+	    -webkit-transform: translate3d(100%, 0, 0) rotateY(0deg)
+	    -moz-transform: translate3d(100%, 0, 0) rotateY(0deg)
+	    -ms-transform: translate(100%, 0) rotateY(0deg)
+	    -o-transform: translate3d(100%, 0, 0) rotateY(0deg)
+	    transform: translate3d(100%, 0, 0) rotateY(0deg)
+	
+
+	// Efeito 8: 3D rotate out  done
+	.hippo-offcanvas-left.three-d-rotate-out.hippo-offcanvas-wrapper
+	    -webkit-perspective: 1500px
+	    -moz-perspective: 1500px
+	    -ms-perspective: 1500px
+	    -o-perspective: 1500px
+	    perspective: 1500px
+	    -webkit-perspective-origin: 0% 50%
+	    -moz-perspective-origin: 0% 50%
+	    -ms-perspective-origin: 0% 50%
+	    -o-perspective-origin: 0% 50%
+	    perspective-origin: 0% 50%
+	
+
+	.hippo-offcanvas-right.three-d-rotate-out.hippo-offcanvas-wrapper
+	    -webkit-perspective: 1500px
+	    -moz-perspective: 1500px
+	    -ms-perspective: 1500px
+	    -o-perspective: 1500px
+	    perspective: 1500px
+	    -webkit-perspective-origin: 100% 50%
+	    -moz-perspective-origin: 100% 50%
+	    -ms-perspective-origin: 100% 50%
+	    -o-perspective-origin: 100% 50%
+	    perspective-origin: 100% 50%
+	
+
+	.three-d-rotate-out .hippo-offcanvas-pusher
+	    -webkit-transform-style: preserve-3d
+	    -moz-transform-style: preserve-3d
+	    -ms-transform-style: preserve-3d
+	    -o-transform-style: preserve-3d
+	    transform-style: preserve-3d
+	
+
+	.hippo-offcanvas-left.three-d-rotate-out.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(300px, 0, 0)
+	    -moz-transform: translate3d(300px, 0, 0)
+	    -ms-transform: translate(300px, 0)
+	    -o-transform: translate3d(300px, 0, 0)
+	    transform: translate3d(300px, 0, 0)
+	
+
+	.hippo-offcanvas-right.three-d-rotate-out.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(-300px, 0, 0)
+	    -moz-transform: translate3d(-300px, 0, 0)
+	    -ms-transform: translate(-300px, 0)
+	    -o-transform: translate3d(-300px, 0, 0)
+	    transform: translate3d(-300px, 0, 0)
+	
+
+	.hippo-offcanvas-left.three-d-rotate-out .hippo-offcanvas-container
+	    -webkit-transform: translate3d(-100%, 0, 0) rotateY(90deg)
+	    -moz-transform: translate3d(-100%, 0, 0) rotateY(90deg)
+	    -ms-transform: translate(-100%, 0) rotateY(90deg)
+	    -o-transform: translate3d(-100%, 0, 0) rotateY(90deg)
+	    transform: translate3d(-100%, 0, 0) rotateY(90deg)
+	    -webkit-transform-origin: 100% 50%
+	    -moz-transform-origin: 100% 50%
+	    -ms-transform-origin: 100% 50%
+	    -o-transform-origin: 100% 50%
+	    transform-origin: 100% 50%
+	    -webkit-transform-style: preserve-3d
+	    -moz-transform-style: preserve-3d
+	    -ms-transform-style: preserve-3d
+	    -o-transform-style: preserve-3d
+	    transform-style: preserve-3d
+	
+
+	.hippo-offcanvas-right.three-d-rotate-out .hippo-offcanvas-container
+	    -webkit-transform: translate3d(100%, 0, 0) rotateY(-90deg)
+	    -moz-transform: translate3d(100%, 0, 0) rotateY(-90deg)
+	    -ms-transform: translate(100%, 0) rotateY(-90deg)
+	    -o-transform: translate3d(100%, 0, 0) rotateY(-90deg)
+	    transform: translate3d(100%, 0, 0) rotateY(-90deg)
+	    -webkit-transform-origin: 0% 50%
+	    -moz-transform-origin: 0% 50%
+	    -ms-transform-origin: 0% 50%
+	    -o-transform-origin: 0% 50%
+	    transform-origin: 0% 50%
+	    -webkit-transform-style: preserve-3d
+	    -moz-transform-style: preserve-3d
+	    -ms-transform-style: preserve-3d
+	    -o-transform-style: preserve-3d
+	    transform-style: preserve-3d
+	
+
+	.hippo-offcanvas-left.three-d-rotate-out.hippo-offcanvas-open .hippo-offcanvas-container
+	    visibility: visible
+	    -webkit-transition: -webkit-transform 0.5s
+	    -moz-transition: -moz-transform 0.5s
+	    -ms-transition: -ms-transform 0.5s
+	    -o-transition: -o-transform 0.5s
+	    transition: transform 0.5s
+	    -webkit-transform: translate3d(-100%, 0, 0) rotateY(0deg)
+	    -moz-transform: translate3d(-100%, 0, 0) rotateY(0deg)
+	    -ms-transform: translate(-100%, 0) rotateY(0deg)
+	    -o-transform: translate3d(-100%, 0, 0) rotateY(0deg)
+	    transform: translate3d(-100%, 0, 0) rotateY(0deg)
+	
+
+	.hippo-offcanvas-right.three-d-rotate-out.hippo-offcanvas-open .hippo-offcanvas-container
+	    visibility: visible
+	    -webkit-transition: -webkit-transform 0.5s
+	    -moz-transition: -moz-transform 0.5s
+	    -ms-transition: -ms-transform 0.5s
+	    -o-transition: -o-transform 0.5s
+	    transition: transform 0.5s
+	    -webkit-transform: translate3d(100%, 0, 0) rotateY(0deg)
+	    -moz-transform: translate3d(100%, 0, 0) rotateY(0deg)
+	    -ms-transform: translate(100%, 0) rotateY(0deg)
+	    -o-transform: translate3d(100%, 0, 0) rotateY(0deg)
+	    transform: translate3d(100%, 0, 0) rotateY(0deg)
+	
+
+	.three-d-rotate-out .hippo-offcanvas-container
+		&:after
+	    	display: none
+	
+
+	// Efeito 9: Scale down pusher  done
+	.scale-down-pusher.hippo-offcanvas-wrapper
+	    -webkit-perspective: 1000px
+	    -moz-perspective: 1000px
+	    -ms-perspective: 1000px
+	    -o-perspective: 1000px
+	    perspective: 1000px
+	
+
+	.scale-down-pusher .hippo-offcanvas-pusher
+	    -webkit-transform-style: preserve-3d
+	    -moz-transform-style: preserve-3d
+	    -ms-transform-style: preserve-3d
+	    -o-transform-style: preserve-3d
+	    transform-style: preserve-3d
+	
+
+	.scale-down-pusher.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(0, 0, -300px)
+	    -moz-transform: translate3d(0, 0, -300px)
+	    -ms-transform: translate3d(0, 0, -300px)
+	    -o-transform: translate3d(0, 0, -300px)
+	    transform: translate3d(0, 0, -300px)
+	    overflow: hidden
+	
+
+	.hippo-offcanvas-left.scale-down-pusher .hippo-offcanvas-container
+	    opacity: 1
+	    -webkit-transform: translate3d(-100%, 0, 0)
+	    -moz-transform: translate3d(-100%, 0, 0)
+	    -ms-transform: translate(-100%, 0)
+	    -o-transform: translate3d(-100%, 0, 0)
+	    transform: translate3d(-100%, 0, 0)
+	
+
+	.hippo-offcanvas-right.scale-down-pusher .hippo-offcanvas-container
+	    opacity: 1
+	    -webkit-transform: translate3d(100%, 0, 0)
+	    -moz-transform: translate3d(100%, 0, 0)
+	    -ms-transform: translate(100%, 0)
+	    -o-transform: translate3d(100%, 0, 0)
+	    transform: translate3d(100%, 0, 0)
+	
+
+	.scale-down-pusher.hippo-offcanvas-open .hippo-offcanvas-container
+	    visibility: visible
+	    -webkit-transition: -webkit-transform 0.5s
+	    -moz-transition: -webkit-transform 0.5s
+	    -ms-transition: -webkit-transform 0.5s
+	    -o-transition: -webkit-transform 0.5s
+	    transition: transform 0.5s
+	    -webkit-transform: translate3d(0, 0, 0)
+	    -moz-transform: translate3d(0, 0, 0)
+	    -ms-transform: translate(0, 0)
+	    -o-transform: translate3d(0, 0, 0)
+	    transform: translate3d(0, 0, 0)
+	
+
+	.scale-down-pusher .hippo-offcanvas-container
+		&:after
+	    	display: none
+	
+
+	// Efeito 10: Scale up  done 
+
+	.scale-up.hippo-offcanvas-wrapper
+	    -webkit-perspective: 1000px
+	    -moz-perspective: 1000px
+	    -ms-perspective: 1000px
+	    -o-perspective: 1000px
+	    perspective: 1000px
+	    -webkit-perspective-origin: 0% 50%
+	    -moz-perspective-origin: 0% 50%
+	    -ms-perspective-origin: 0% 50%
+	    -o-perspective-origin: 0% 50%
+	    perspective-origin: 0% 50%
+	
+
+	.hippo-offcanvas-left.scale-up.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(300px, 0, 0)
+	    -moz-transform: translate3d(300px, 0, 0)
+	    -ms-transform: translate(300px, 0)
+	    -o-transform: translate3d(300px, 0, 0)
+	    transform: translate3d(300px, 0, 0)
+	
+
+	.hippo-offcanvas-right.scale-up.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(-300px, 0, 0)
+	    -moz-transform: translate3d(-300px, 0, 0)
+	    -ms-transform: translate(-300px, 0)
+	    -o-transform: translate3d(-300px, 0, 0)
+	    transform: translate3d(-300px, 0, 0)
+	
+
+	.hippo-offcanvas-left.scale-up .hippo-offcanvas-container
+	    z-index: 1
+	    opacity: 1
+	    -webkit-transform: translate3d(0, 0, -300px)
+	    -moz-transform: translate3d(0, 0, -300px)
+	    -ms-transform: translate3d(0, 0, -300px)
+	    -o-transform: translate3d(0, 0, -300px)
+	    transform: translate3d(0, 0, -300px)
+	
+
+	.hippo-offcanvas-right.scale-up .hippo-offcanvas-container
+	    z-index: 1
+	    opacity: 1
+	    -webkit-transform: translate3d(150%, 0, -300px)
+	    -moz-transform: translate3d(150%, 0, -300px)
+	    -ms-transform: translate3d(150%, 0, -300px)
+	    -o-transform: translate3d(150%, 0, -300px)
+	    transform: translate3d(150%, 0, -300px)
+	
+
+	.scale-up.hippo-offcanvas-open .hippo-offcanvas-container
+	    visibility: visible
+	    -webkit-transition: -webkit-transform 0.5s
+	    -moz-transition: -moz-transform 0.5s
+	    -ms-transition: -ms-transform 0.5s
+	    -o-transition: -o-transform 0.5s
+	    transition: transform 0.5s
+	    -webkit-transform: translate3d(0, 0, 0)
+	    -moz-transform: translate3d(0, 0, 0)
+	    -ms-transform: translate(0, 0)
+	    -o-transform: translate3d(0, 0, 0)
+	    transform: translate3d(0, 0, 0)
+	
+
+	// Efeito 11: Scale and rotate pusher  done 
+
+	.scale-rotate-pusher.hippo-offcanvas-wrapper
+	    -webkit-perspective: 1000px
+	    -moz-perspective: 1000px
+	    -ms-perspective: 1000px
+	    -o-perspective: 1000px
+	    perspective: 1000px
+	
+
+	.scale-rotate-pusher .hippo-offcanvas-pusher
+	    -webkit-transform-style: preserve-3d
+	    -moz-transform-style: preserve-3d
+	    -ms-transform-style: preserve-3d
+	    -o-transform-style: preserve-3d
+	    transform-style: preserve-3d
+	
+
+	.hippo-offcanvas-left.scale-rotate-pusher.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(100px, 0, -600px) rotateY(-20deg)
+	    -moz-transform: translate3d(100px, 0, -600px) rotateY(-20deg)
+	    -ms-transform: translate3d(100px, 0, -600px) rotateY(-20deg)
+	    -o-transform: translate3d(100px, 0, -600px) rotateY(-20deg)
+	    transform: translate3d(100px, 0, -600px) rotateY(-20deg)
+	    overflow: hidden
+	
+
+	.hippo-offcanvas-right.scale-rotate-pusher.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(-100px, 0, -600px) rotateY(20deg)
+	    -moz-transform: translate3d(-100px, 0, -600px) rotateY(20deg)
+	    -ms-transform: translate3d(-100px, 0, -600px) rotateY(20deg)
+	    -o-transform: translate3d(-100px, 0, -600px) rotateY(20deg)
+	    transform: translate3d(-100px, 0, -600px) rotateY(20deg)
+	    overflow: hidden
+
+
+	.hippo-offcanvas-left.scale-rotate-pusher .hippo-offcanvas-container
+	    opacity: 1
+	    -webkit-transform: translate3d(-100%, 0, 0)
+	    -moz-transform: translate3d(-100%, 0, 0)
+	    -ms-transform: translate(-100%, 0)
+	    -o-transform: translate3d(-100%, 0, 0)
+	    transform: translate3d(-100%, 0, 0)
+	
+
+	.hippo-offcanvas-right.scale-rotate-pusher .hippo-offcanvas-container
+	    opacity: 1;
+	    -webkit-transform: translate3d(100%, 0, 0)
+	    -moz-transform: translate3d(100%, 0, 0)
+	    -ms-transform: translate(100%, 0)
+	    -o-transform: translate3d(100%, 0, 0)
+	    transform: translate3d(100%, 0, 0)
+	
+
+	.scale-rotate-pusher.hippo-offcanvas-open .hippo-offcanvas-container
+	    visibility: visible
+	    -webkit-transition: -webkit-transform 0.5s
+	    -moz-transition: -moz-transform 0.5s
+	    -ms-transition: -ms-transform 0.5s
+	    -o-transition: -o-transform 0.5s
+	    transition: transform 0.5s
+	    -webkit-transform: translate3d(0, 0, 0)
+	    -moz-transform: translate3d(0, 0, 0)
+	    -ms-transform: translate(0, 0)
+	    -o-transform: translate3d(0, 0, 0)
+	    transform: translate3d(0, 0, 0)
+	
+
+	.scale-rotate-pusher .hippo-offcanvas-container
+		&:after
+	    	display: none
+	
+
+	// Efeito 12: Open door  done
+
+	.open-door.hippo-offcanvas-wrapper
+	    -webkit-perspective: 1000px
+	    -moz-perspective: 1000px
+	    -ms-perspective: 1000px
+	    -o-perspective: 1000px
+	    perspective: 1000px
+	
+
+	.hippo-offcanvas-left.open-door .hippo-offcanvas-pusher
+	    -webkit-transform-origin: 100% 50%
+	    transform-origin: 100% 50%
+	    -webkit-transform-style: preserve-3d
+	    -moz-transform-style: preserve-3d
+	    -ms-transform-style: preserve-3d
+	    -o-transform-style: preserve-3d
+	    transform-style: preserve-3d
+	
+
+	.hippo-offcanvas-right.open-door .hippo-offcanvas-pusher
+	    -webkit-transform-origin: 0% 50%
+	    -moz-transform-origin: 0% 50%
+	    -ms-transform-origin: 0% 50%
+	    -o-transform-origin: 0% 50%
+	    transform-origin: 0% 50%
+	    -webkit-transform-style: preserve-3d
+	    -moz-transform-style: preserve-3d
+	    -ms-transform-style: preserve-3d
+	    -o-transform-style: preserve-3d
+	    transform-style: preserve-3d
+	
+
+	.hippo-offcanvas-left.open-door.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: rotateY(-10deg)
+	    -moz-transform: rotateY(-10deg)
+	    -ms-transform: rotateY(-10deg)
+	    -o-transform: rotateY(-10deg)
+	    transform: rotateY(-10deg)
+	    overflow: hidden
+	
+
+	.hippo-offcanvas-right.open-door.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: rotateY(10deg)
+	    -moz-transform: rotateY(10deg)
+	    -ms-transform: rotateY(10deg)
+	    -o-transform: rotateY(10deg)
+	    transform: rotateY(10deg)
+	    overflow: hidden
+	
+
+	.hippo-offcanvas-left.open-door .hippo-offcanvas-container
+	    opacity: 1
+	    -webkit-transform: translate3d(-100%, 0, 0)
+	    -moz-transform: translate3d(-100%, 0, 0)
+	    -ms-transform: translate(-100%, 0)
+	    -o-transform: translate3d(-100%, 0, 0)
+	    transform: translate3d(-100%, 0, 0)
+	
+
+	.hippo-offcanvas-right.open-door .hippo-offcanvas-container
+	    opacity: 1
+	    -webkit-transform: translate3d(100%, 0, 0)
+	    -moz-transform: translate3d(100%, 0, 0)
+	    -ms-transform: translate(100%, 0)
+	    -o-transform: translate3d(100%, 0, 0)
+	    transform: translate3d(100%, 0, 0)
+	
+
+	.open-door.hippo-offcanvas-open .hippo-offcanvas-container
+	    visibility: visible
+	    -webkit-transition: -webkit-transform 0.5s
+	    -moz-transition: -moz-transform 0.5s
+	    -ms-transition: -ms-transform 0.5s
+	    -o-transition: -o-transform 0.5s
+	    transition: transform 0.5s
+	    -webkit-transform: translate3d(0, 0, 0)
+	    -moz-transform: translate3d(0, 0, 0)
+	    -ms-transform: translate(0, 0)
+	    -o-transform: translate3d(0, 0, 0)
+	    transform: translate3d(0, 0, 0)
+	
+
+	.open-door .hippo-offcanvas-container
+		&:after
+	    	display: none
+	
+
+	// Efeito 13: Fall down  done */
+
+	.fall-down.hippo-offcanvas-wrapper
+	    -webkit-perspective: 1500px
+	    -moz-perspective: 1500px
+	    -ms-perspective: 1500px
+	    -o-perspective: 1500px
+	    perspective: 1500px
+	    -webkit-perspective-origin: 0% 50%
+	    -moz-perspective-origin: 0% 50%
+	    -ms-perspective-origin: 0% 50%
+	    -o-perspective-origin: 0% 50%
+	    perspective-origin: 0% 50%
+	
+
+	.hippo-offcanvas-left.fall-down.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(300px, 0, 0)
+	    -moz-transform: translate3d(300px, 0, 0)
+	    -ms-transform: translate(300px, 0)
+	    -o-transform: translate3d(300px, 0, 0)
+	    transform: translate3d(300px, 0, 0)
+	
+
+	.hippo-offcanvas-right.fall-down.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(-300px, 0, 0)
+	    -moz-transform: translate3d(-300px, 0, 0)
+	    -ms-transform: translate(-300px, 0)
+	    -o-transform: translate3d(-300px, 0, 0)
+	    transform: translate3d(-300px, 0, 0)
+	
+
+	.fall-down .hippo-offcanvas-container
+	    z-index: 1
+	    opacity: 1
+	    -webkit-transform: translate3d(0, -100%, 0)
+	    -moz-transform: translate3d(0, -100%, 0)
+	    -ms-transform: translate(0, -100%)
+	    -o-transform: translate3d(0, -100%, 0)
+	    transform: translate3d(0, -100%, 0)
+	
+
+	.fall-down.hippo-offcanvas-open .hippo-offcanvas-container 
+	    visibility: visible
+	    -webkit-transition-timing-function: ease-in-out
+	    transition-timing-function: ease-in-out
+	    -webkit-transition-property: -webkit-transform
+	    transition-property: transform
+	    -webkit-transform: translate3d(0, 0, 0)
+	    -moz-transform: translate3d(0, 0, 0)
+	    -ms-transform: translate(0, 0)
+	    -o-transform: translate3d(0, 0, 0)
+	    transform: translate3d(0, 0, 0)
+	    -webkit-transition-speed: 0.2s
+	    transition-speed: 0.2s
+	
+
+	// Efeito 14: Delayed 3D rotate
+
+	.hippo-offcanvas-left.delayed-three-d-rotate.hippo-offcanvas-wrapper
+	    -webkit-perspective: 1500px
+	    -moz-perspective: 1500px
+	    -ms-perspective: 1500px
+	    -o-perspective: 1500px
+	    perspective: 1500px
+	    -webkit-perspective-origin: 0% 50%
+	    -moz-perspective-origin: 0% 50%
+	    -ms-perspective-origin: 0% 50%
+	    -o-perspective-origin: 0% 50%
+	    perspective-origin: 0% 50%
+	
+
+	.hippo-offcanvas-right.delayed-three-d-rotate.hippo-offcanvas-wrapper
+	    -webkit-perspective: 1500px
+	    -moz-perspective: 1500px
+	    -ms-perspective: 1500px
+	    -o-perspective: 1500px
+	    perspective: 1500px
+	    -webkit-perspective-origin: 100% 50%
+	    -moz-perspective-origin: 100% 50%
+	    -ms-perspective-origin: 100% 50%
+	    -o-perspective-origin: 100% 50%
+	    perspective-origin: 100% 50%
+	
+
+	.delayed-three-d-rotate .hippo-offcanvas-pusher
+	    -webkit-transform-style: preserve-3d
+	    -moz-transform-style: preserve-3d
+	    -ms-transform-style: preserve-3d
+	    -o-transform-style: preserve-3d
+	    transform-style: preserve-3d
+	
+
+	.hippo-offcanvas-left.delayed-three-d-rotate.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(300px, 0, 0)
+	    -moz-transform: translate3d(300px, 0, 0)
+	    -ms-transform: translate(300px, 0)
+	    -o-transform: translate3d(300px, 0, 0)
+	    transform: translate3d(300px, 0, 0)
+	
+
+	.hippo-offcanvas-right.delayed-three-d-rotate.hippo-offcanvas-open .hippo-offcanvas-pusher
+	    -webkit-transform: translate3d(-300px, 0, 0)
+	    -moz-transform: translate3d(-300px, 0, 0)
+	    -ms-transform: translate(-300px, 0)
+	    -o-transform: translate3d(-300px, 0, 0)
+	    transform: translate3d(-300px, 0, 0)
+	
+
+	.hippo-offcanvas-left.delayed-three-d-rotate .hippo-offcanvas-container
+	    -webkit-transform: translate3d(-100%, 0, 0) rotateY(90deg)
+	    -moz-transform: translate3d(-100%, 0, 0) rotateY(90deg)
+	    -ms-transform: translate(-100%, 0) rotateY(90deg)
+	    -o-transform: translate3d(-100%, 0, 0) rotateY(90deg)
+	    transform: translate3d(-100%, 0, 0) rotateY(90deg)
+	    -webkit-transform-origin: 0% 50%
+	    -moz-transform-origin: 0% 50%
+	    -ms-transform-origin: 0% 50%
+	    -o-transform-origin: 0% 50%
+	    transform-origin: 0% 50%
+	    -webkit-transform-style: preserve-3d
+	    -moz-transform-style: preserve-3d
+	    -ms-transform-style: preserve-3d
+	    -o-transform-style: preserve-3d
+	    transform-style: preserve-3d
+	
+
+	.hippo-offcanvas-right.delayed-three-d-rotate .hippo-offcanvas-container
+	    -webkit-transform: translate3d(100%, 0, 0) rotateY(-90deg)
+	    -moz-transform: translate3d(100%, 0, 0) rotateY(-90deg)
+	    -ms-transform: translate(100%, 0) rotateY(-90deg)
+	    -o-transform: translate3d(100%, 0, 0) rotateY(-90deg)
+	    transform: translate3d(100%, 0, 0) rotateY(-90deg)
+	    -webkit-transform-origin: 100% 50%
+	    -moz-transform-origin: 100% 50%
+	    -ms-transform-origin: 100% 50%
+	    -o-transform-origin: 100% 50%
+	    transform-origin: 100% 50%
+	    -webkit-transform-style: preserve-3d
+	    -moz-transform-style: preserve-3d
+	    -ms-transform-style: preserve-3d
+	    -o-transform-style: preserve-3d
+	    transform-style: preserve-3d
+	
+
+	.hippo-offcanvas-left.delayed-three-d-rotate.hippo-offcanvas-open .hippo-offcanvas-container
+	    visibility: visible
+	    -webkit-transition-delay: 0.1s
+	    transition-delay: 0.1s
+	    -webkit-transition-timing-function: ease-in-out
+	    transition-timing-function: ease-in-out
+	    -webkit-transition-property: -webkit-transform
+	    transition-property: transform
+	    -webkit-transform: translate3d(-100%, 0, 0) rotateY(0deg)
+	    -moz-transform: translate3d(-100%, 0, 0) rotateY(0deg)
+	    -ms-transform: translate(-100%, 0) rotateY(0deg)
+	    -o-transform: translate3d(-100%, 0, 0) rotateY(0deg)
+	    transform: translate3d(-100%, 0, 0) rotateY(0deg)
+	
+
+	.hippo-offcanvas-right.delayed-three-d-rotate.hippo-offcanvas-open .hippo-offcanvas-container
+	    visibility: visible
+	    -webkit-transition-delay: 0.1s
+	    transition-delay: 0.1s
+	    -webkit-transition-timing-function: ease-in-out
+	    transition-timing-function: ease-in-out
+	    -webkit-transition-property: -webkit-transform
+	    transition-property: transform
+	    -webkit-transform: translate3d(100%, 0, 0) rotateY(0deg)
+	    -moz-transform: translate3d(100%, 0, 0) rotateY(0deg)
+	    -ms-transform: translate(100%, 0) rotateY(0deg)
+	    -o-transform: translate3d(100%, 0, 0) rotateY(0deg)
+	    transform: translate3d(100%, 0, 0) rotateY(0deg)
+	
+
+
+
+	/*IE fix*/
+	.ie9 .reveal .hippo-offcanvas-container,
+	.ie10 .reveal .hippo-offcanvas-container,
+	.ie11 .reveal .hippo-offcanvas-container
+	    display: none !important
+	
+
+	.ie9 .reveal.hippo-offcanvas-open .hippo-offcanvas-container,
+	.ie10 .reveal.hippo-offcanvas-open .hippo-offcanvas-container,
+	.ie11 .reveal.hippo-offcanvas-open .hippo-offcanvas-container
+	    display: block !important
+	

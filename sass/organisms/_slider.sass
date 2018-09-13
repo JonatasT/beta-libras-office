@@ -1,0 +1,158 @@
+//SLIDER
+.item       //container dos slides
+    max-height: 720px
+
+.slides     //imagens dos slides
+    +clearfix
+    position: top center
+    repeat: no-repeat
+    attachment: fixed
+    width: 100%
+    size: cover
+
+
+
+.hero-slide .container
+    position: absolute
+    left: 0
+    right: 0
+    top: 50%
+    transform: translateY(-50%)
+    
+
+.hero-slide .carousel-caption
+    position: relative
+    right: 0
+    left: 0
+    text-align: left
+    text-shadow: none
+    width: 60%
+
+.hero-slide .carousel-caption 
+    small
+        font-size: 13px
+        color: rgba(255,255,255,.5)
+        font-weight: 500
+        animation-delay: 1s
+    
+
+.hero-slide .carousel-caption .phone
+    font-size: 30px
+    color: $laranja
+    -webkit-animation-delay: 100ms
+    animation-delay: 100ms
+    
+
+.hero-slide .carousel-caption
+    h1
+        font-size: 56px
+        line-height: 1
+        font-weight: bold
+        text-transform: capitalize
+        margin: 30px 0 20px
+        -webkit-animation-delay: 150ms
+        animation-delay: 150ms
+        color: $branco
+
+
+.hero-slide .carousel-caption .lead
+    font-size: 24px
+    color: $branco
+    font-weight: normal
+    margin-bottom: 30px
+    -webkit-animation-delay: 200ms
+    animation-delay: 200ms
+    
+
+.hero-slide .carousel-caption .btn
+    -webkit-animation-delay: 250ms
+    animation-delay: 250ms
+
+
+/* Slider Controller */
+.hero-slide .carousel-control.left,
+.hero-slide .carousel-control.right
+    font-size: 30px
+    width: 30px
+    height: 100px
+    line-height: 100px
+    top: 50%
+    background: $azul
+    cursor: pointer
+    border: 0
+    text-shadow: none
+    transform: translateY(-50%)
+    
+
+.hero-slide .carousel-control.left
+    left: -100%
+    
+
+.hero-slide .carousel-control.right
+    right: -100%
+    
+
+.hero-slide:hover .left
+    left: 0
+    
+
+.hero-slide:hover .right
+    right: 0
+    
+
+/* Slider Indicator*/
+.hero-slide .carousel-indicators 
+    li 
+        border: 2px solid $branco
+        opacity: .5
+    
+
+.hero-slide .carousel-indicators 
+    li.active
+        border-color: $laranja
+        background-color: $laranja
+        opacity: 1
+    
+
+
+//CAROUSEL INDICADORES//
+.handover-wrapper .carousel-indicators
+    left: 0
+    bottom: -20px
+    margin-left: -25%
+
+
+.handover-wrapper .carousel-indicators
+    li
+        background-color: rgba(0, 0, 0, 0.5)
+        border: 1px solid transparent
+
+
+.testimonial-wrapper .carousel-indicators
+    left: 0
+    bottom: 40px
+    margin-left: -25%
+
+.handover-wrapper .carousel-indicators li,
+.testimonial-wrapper .carousel-indicators li
+    width: 22px
+    height: 7px
+    margin: 0 5px 0 0
+    border-radius: 1em
+
+
+.handover-wrapper .carousel-indicators .active,
+.testimonial-wrapper .carousel-indicators .active
+    width: 22px
+    height: 7px
+    margin: 0 5px 0 0
+    background-color: $gold
+    border: 1px solid $gold
+
+
+.testimonial-wrapper .carousel-indicators
+    li
+        background-color: rgba(255, 255, 255, 0.5)
+        border: 1px solid transparent
+
+
