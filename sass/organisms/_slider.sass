@@ -34,6 +34,11 @@
         color: rgba(255,255,255,.5)
         font-weight: 500
         animation-delay: 1s
+
+        +breakpoint($celular)
+            font-size: 8px  !important
+        +breakpoint($tablet)
+            font-size: 10px     !important
     
 
 .hero-slide .carousel-caption .phone
@@ -53,6 +58,19 @@
         -webkit-animation-delay: 150ms
         animation-delay: 150ms
         color: $branco
+
+        +breakpoint($tablet)
+            font-size: 30px
+        +breakpoint($celular)
+            font-size: 20px
+
+    p
+        +breakpoint($celular)
+            font-size: 25px
+        +breakpoint($tablet)
+            font-size: 20px  !important
+
+
 
 
 .hero-slide .carousel-caption .lead
