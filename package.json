@@ -25,6 +25,7 @@
     "gulp-watch": "^5.0.1"
   },
   "dependencies": {
+    "hamburgers": "^0.9.3",
     "lodash": "^4.17.10"
   }
 }
