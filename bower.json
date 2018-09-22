@@ -23,6 +23,7 @@
     "sass-flex-mixin": "^1.0.3"
   },
   "devDependencies": {
-    "css-hamburgers": "^0.9.3"
+    "css-hamburgers": "^0.9.3",
+    "wow": "wowjs#^1.1.2"
   }
 }

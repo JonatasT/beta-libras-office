@@ -1,4 +1,13 @@
 (function ($) {
+
+    //Função botão toggle- menu responsivo
+    $('.toggle').click(function(){
+        $('.offcanvas-menu').toggleClass('hidden');
+        $('.offcanvas-menu').toggleClass('ativo');
+        $('.hamburger').toggleClass('is-active');
+    });
+
+
     $.fn.extend({
         HippoOffCanvasMenu: function (options) {
 
@@ -101,6 +110,8 @@
 
                     });
                 });
+
+
 
                 $(document).on(eventType, function (event) {
 
