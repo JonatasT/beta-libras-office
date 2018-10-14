@@ -131,7 +131,7 @@ header
 	    background-color: transparent
 
 
-	/*CSS TAB*/
+	/*SASS TAB*/
 	.nav-tabs
 	    border-bottom: 0
 	    background: rgba(255, 255, 255, 0.1)
@@ -192,152 +192,133 @@ header
 	    margin-bottom: 15px
 
 	
-
-	//Dropdown//
-	.dropdown-menu
-	    border: 0
-	    border-radius: 0
-	    position: relative
-	    display: block
-	    float: none
-	    width: 100%
-	    box-shadow: none
-	    background: $laranja
-	
-
-	.nav.navbar-nav li ul.dropdown-menu li a
-	    padding: 7px 20px
-	    font-size: 13px
-	    color: $branco
-	    line-height: 20px 
-
-
+	/*CSS Dropdown menu*/
+	.dropdown-menu 
+		border: 0 
+		border-radius: 0 
+		position: relative 
+		display: block 
+		float: none 
+		width: 100% 
+		box-shadow: none 
+		background: #ff3f00 
+	.nav 
+		&.navbar-nav 
+			li 
+				ul 
+					&.dropdown-menu 
+						li 
+							a 
+								padding: 7px 20px 
+								font-size: 13px 
+								color: #fff 
+								line-height: 20px 
+								text-transform: capitalize 
 	.nav.navbar-nav li ul.dropdown-menu li a:hover,
-	.nav.navbar-nav li ul.dropdown-menu li a:focus
-	    background: transparent
-	    color: $gold
-
-
+	.nav.navbar-nav li ul.dropdown-menu li a:focus 
+		background: transparent 
+		color: #fcbb3c 
 	.dropdown-menu>.active>a, 
 	.dropdown-menu>.active>a:hover, 
-	.dropdown-menu>.active>a:focus
-	    color: $gold !important
-	    background-color: transparent
+	.dropdown-menu>.active>a:focus 
+		color: #fcbb3c !important 
+		background-color: transparent 
+
 
 
 	/* Menu hover */
 
 	/* 2nd camada do menu */
 
-	li.dropdown > .submenu-wrapper
-	    position: absolute
-	    display: block
-	    left: 0
-	    z-index: 999
-	    pointer-events: none
-	    top: 38px // Vai mudar o tema específico
+	li 
+		&.dropdown 
+			& > .submenu-wrapper 
+				position: absolute 
+				display: block 
+				left: 0 
+				z-index: 999 
+				pointer-events: none 
+				top: 38px 
 
+				/** IE pointer events */
+				&.no-pointer-events 
+					display: none 
+				& > .submenu-inner 
+					margin-top: 16px 
+					opacity: 0 
+					filter: alpha(opacity=0) 
+					-webkit-transform: translateY(-100%) 
+					-moz-transform: translateY(-100%) 
+					-ms-transform: translateY(-100%) 
+					-o-transform: translateY(-100%) 
+					transform: translateY(-100%)
 
-	/** IE ponteiro de eventos */
+					/* Will change on theme specific */
+					min-width: 200px 
+					-webkit-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86) 
+					-moz-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86) 
+					-ms-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86) 
+					-o-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86) 
+					transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86) 
+			&:hover 
+				& > .submenu-wrapper 
+					pointer-events: auto 
+					&.no-pointer-events 
+						display: block 
+					& > .submenu-inner 
+						opacity: 1 
+						filter: alpha(opacity=100) 
+						-webkit-transform: translateY(0) 
+						-moz-transform: translateY(0) 
+						-ms-transform: translateY(0) 
+						-o-transform: translateY(0) 
+						transform: translateY(0) 
+				& > .submenu-sub-wrapper 
+					pointer-events: auto 
+					& > .submenu-sub-inner 
+						opacity: 1 
+						filter: alpha(opacity=100) 
+						-webkit-transform: translateX(0) 
+						-moz-transform: translateX(0) 
+						-ms-transform: translateX(0) 
+						-o-transform: translateX(0) 
+						transform: translateX(0) 
+			&.menu-animating 
+				& > .submenu-wrapper 
+					overflow: hidden 
+				& > .submenu-sub-wrapper 
+					overflow: hidden 
+			& > .submenu-sub-wrapper 
+				position: absolute 
+				left: 100% 
+				top: 0 
+				display: block 
+				z-index: 1000 
+				width: 100% 
+				pointer-events: none 
+				& > .submenu-sub-inner 
+					opacity: 0 
+					filter: alpha(opacity=0) 
+					-webkit-transform: translateX(-100%) 
+					-moz-transform: translateX(-100%) 
+					-ms-transform: translateX(-100%) 
+					-o-transform: translateX(-100%) 
+					transform: translateX(-100%) 
+					-webkit-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86) 
+					-moz-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86) 
+					-ms-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86) 
+					-o-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86) 
+					transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86) 
+	.ie9 
+		li 
+			&.dropdown 
+				& > .submenu-wrapper 
+					& > .submenu-inner 
+						margin-top: 34px 
+		.top-nav-collapse 
+			li 
+				&.dropdown 
+					& > .submenu-wrapper 
+						& > .submenu-inner 
+							margin-top: 14px 
 
-	li.dropdown > .submenu-wrapper.no-pointer-events
-	    display: none
-	
-
-	li.dropdown > .submenu-wrapper > .submenu-inner
-	    margin-top: 16px
-	    opacity: 0
-	    filter: alpha(opacity=0) // For IE8 and earlier
-
-	    -webkit-transform: translateY(-100%)
-	    -moz-transform: translateY(-100%)
-	    -ms-transform: translateY(-100%)
-	    -o-transform: translateY(-100%)
-	    transform: translateY(-100%)
-
-	    /* Will change on theme specific */
-
-	    min-width: 200px
-
-	    -webkit-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
-	    -moz-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
-	    -ms-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
-	    -o-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
-	    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
-	
-
-	/*for IE9*/
-	.ie9 li.dropdown > .submenu-wrapper > .submenu-inner
-	    margin-top: 34px
-	
-
-	/*for IE9*/
-	.ie9 .top-nav-collapse li.dropdown > .submenu-wrapper > .submenu-inner
-	    margin-top: 14px
-
-
-	li.dropdown:hover > .submenu-wrapper
-	    pointer-events: auto
-	
-
-	li.dropdown:hover > .submenu-wrapper.no-pointer-events
-	    display: block
-	    
-
-	li.dropdown:hover > .submenu-wrapper > .submenu-inner
-	    opacity: 1
-	    filter: alpha(opacity=100) // For IE8 and earlier */
-	    -webkit-transform: translateY(0)
-	    -moz-transform: translateY(0)
-	    -ms-transform: translateY(0)
-	    -o-transform: translateY(0)
-	    transform: translateY(0)
-
-
-	li.dropdown.menu-animating > .submenu-wrapper
-	    overflow: hidden
-
-	/* 3rd label menu */
-
-	li.dropdown > .submenu-sub-wrapper
-	    position: absolute
-	    left: 100%
-	    top: 0
-	    display: block
-	    z-index: 1000
-	    width: 100%
-	    pointer-events: none
-
-	li.dropdown > .submenu-sub-wrapper > .submenu-sub-inner
-	    opacity: 0
-	    filter: alpha(opacity=0) // For IE8 and earlier */
-
-	    -webkit-transform: translateX(-100%)
-	    -moz-transform: translateX(-100%)
-	    -ms-transform: translateX(-100%)
-	    -o-transform: translateX(-100%)
-	    transform: translateX(-100%)
-
-	    -webkit-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
-	    -moz-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
-	    -ms-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
-	    -o-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
-	    transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86)
-
-
-	li.dropdown:hover > .submenu-sub-wrapper
-	    pointer-events: auto
-	
-
-	li.dropdown:hover > .submenu-sub-wrapper > .submenu-sub-inner 
-	    opacity: 1
-	    filter: alpha(opacity=100) // For IE8 and earlier */
-	    -webkit-transform: translateX(0)
-	    -moz-transform: translateX(0)
-	    -ms-transform: translateX(0)
-	    -o-transform: translateX(0)
-	    transform: translateX(0)
-	
-
-	li.dropdown.menu-animating > .submenu-sub-wrapper
-	    overflow: hidden

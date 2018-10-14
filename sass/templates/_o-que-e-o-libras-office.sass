@@ -1,0 +1,36 @@
+@import organisms/padrao
+
+
+.titulo
+	margin-bottom: 30px
+	color: $laranja 	!important
+
+
+.panel-heading
+    .accordion-toggle 
+        &:after 
+            font-family: 'Glyphicons Halflings'
+            font-weight: bold 	!important
+            content: "\e114" 
+            float: right 
+            color: grey
+        &.collapsed 
+            &:after 
+                content: "\e080" 
+
+.panel-heading
+	border-color: $branco 	!important
+	text-decoration: none 	!important
+	background: $branco		!important
+
+
+
+.panel-group
+	margin: 0 -14.5px 0
+	+make-sm-column(8)
+
+.list-group
+	margin-top: 50px
+
+.badge
+	background: $laranja 	!important

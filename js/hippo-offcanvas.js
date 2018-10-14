@@ -15,7 +15,7 @@
                 documentWrapper: '.hippo-offcanvas-wrapper',
                 position       : 'hippo-offcanvas-left', // class name
                 //opener         : 'hippo-offcanvas-open', // class name
-                effect         : 'slide-on-top',         // class name
+
                 contentWrapper : '.hippo-offcanvas-contents',
                 closeButton    : '.hippo-offcanvas-close',
                 menuWrapper    : '.hippo-offcanvas-container',  // class name

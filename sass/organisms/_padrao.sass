@@ -1,24 +1,17 @@
 @import organisms/social-media
 @import organisms/header
 
-@import atoms/botao-icone
-@import atoms/botao-generico
-
 header
-	min-height: 150px;
+	+clearfix
+	min-height: 130px 	!important
 
 
-//navbar
+//Barra de navegação
 .navbar
 	background-color: $azul 	!important
+
 .dropdown-menu
 	background: $azul 	!important
-
-
-//Sitemap
-.sitemap 
-	margin-top: -20px
-
 
 //Corpo de conteudo do site
 .conteudo
@@ -31,6 +24,12 @@ header
 	+make-sm-column(4)
 	+justify-content(space-around)
 	height: 500px
+
+	+breakpoint($celular)
+		text-align: center
+		+align-items(center)
+		+justify-content(space-around)
+		margin: 50px -16px 0
 
 .info
 	font-style: italic
@@ -47,4 +46,3 @@ p
 
 h5
 	color: $laranja 	!important
-
