@@ -8,3 +8,29 @@
 @import organisms/header
 @import organisms/menu-responsivo
 @import organisms/footer
+
+//Botão toTop
+.btn-primary 
+	color: $branco 	!important
+	background-color: $cinza-claro 	!important
+	border-radius: 0px 	!important
+	border-color: $cinza-claro 	!important
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary.focus, 
+.btn-primary:active, 
+.btn-primary.active, 
+.open>.dropdown-toggle.btn-primary 
+	color: $laranja 		!important
+	background: transparent  	!important
+	border: 2px solid $laranja  	!important
+	border-radius: 0px 	!important
+
+#toTop
+    position: fixed
+    bottom: 30px 
+    right: 20px 
+    padding: 5px 10px
+    cursor: pointer
+    display: none
+    z-index: 9999 

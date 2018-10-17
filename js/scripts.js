@@ -1,17 +1,6 @@
 jQuery(function ($) {
 
     'use strict';
-
-
-    /* ---------------------------------------------- /*
-     * Preloader
-    /* ---------------------------------------------- */
-
-    $(window).ready(function() {
-        $('#status').fadeOut();
-        $('#preloader').delay(200).fadeOut('slow');
-    });
-
     
     // -------------------------------------------------------------
     // WOW JS
@@ -19,24 +8,6 @@ jQuery(function ($) {
 
     (function () {
         new WOW().init();
-    }());
-
-
-    
-    // -------------------------------------------------------------
-    // Related Project
-    // -------------------------------------------------------------
-
-    (function () {
-          $(".related-work-carousel").owlCarousel({
-         
-              autoPlay: 5000, //Set AutoPlay to 5 seconds
-         
-              items : 7,
-              itemsDesktop : [1199,3],
-              itemsDesktopSmall : [979,3]
-         
-          });
     }());
 
 
@@ -62,30 +33,6 @@ jQuery(function ($) {
 		});
     }());
 
-
-    // -------------------------------------------------------------
-    // CSS Testimonial Carousel
-    // -------------------------------------------------------------
-
-    //prevent bootstrap carousel to autorun
-    (function () {
-        $('#css-testimonial-carousel').carousel({
-            pause: true,
-            interval: false
-        });
-    }());
-
-    // -------------------------------------------------------------
-    // CSS Testimonial Carousel
-    // -------------------------------------------------------------
-
-    //prevent bootstrap carousel to autorun
-    (function () {
-		$('#about-us-slider').carousel({
-			pause: true,
-			interval: false
-		});
-    }());
 
 
     // -----------------------------------------------------------------
@@ -179,7 +126,7 @@ jQuery(function ($) {
 
     (function(){
 
-          $('body').append('<div id="toTop" class="btn btn-primary"><i class="fa fa-chevron-up"></i></div>');
+          $('html, body').append('<div id="toTop" class="btn btn-primary"><i class="fa fa-chevron-up"></i></div>');
 
             $(window).scroll(function () {
                 if ($(this).scrollTop() != 0) {
@@ -189,15 +136,12 @@ jQuery(function ($) {
                 }
             }); 
 
-        $('#toTop').on('click',function(){
-            $("html, body").animate({ scrollTop: 0 }, 600);
+        $('#toTop').on('click', function(){
+            $("html, body").animate({ scrollTop: -1000 }, 1000);
             return false;
         });
 
     }());
-
-
-
 
 
     // ----------------------------------------------------------------

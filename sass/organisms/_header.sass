@@ -82,16 +82,21 @@ header
 	        background: $laranja
 	        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out
 	        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out
-	        transition: background .5s ease-in-out,padding .5s ease-in-out
+	        transition: background .5s ease-in-out,padding .5s ease-in-out, width .5s ease-in-out
 	   
 
 	    /*for IE9 fallback background color*/
-	    .no-csstransitions .navbar-default
+	    .no-csstransitions
 	        background: $laranja
 	    
-	    .collapse .navbar-collapse .navbar-collapse
+	    .top-nav-collapse
 	        padding: 0
-	        background-color: $azul !important
+	        background-color: $laranja !important
+
+	        .logo
+	        	img
+	        		width: 160px
+	        		margin-top: 7px
 
 
 
@@ -320,5 +325,4 @@ header
 				&.dropdown 
 					& > .submenu-wrapper 
 						& > .submenu-inner 
-							margin-top: 14px 
-
+							margin-top: 14px
