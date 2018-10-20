@@ -7,6 +7,44 @@
         $('.hamburger').toggleClass('is-active');
     });
 
+    // -----------------------------------------------------------------
+    // jQuery to collapse the navbar on scroll
+    // ------------------------------------------------------------------
+
+    $(window).scroll(function() {
+        if ($(".navbar").offset().top > 50) {
+            $(".navbar-fixed-top").addClass("top-nav-collapse");
+        } else {
+            $(".navbar-fixed-top").removeClass("top-nav-collapse");
+        }
+    });
+
+    // ------------------------------------------------------------------
+    // jQuery for back to Top
+    // ------------------------------------------------------------------
+
+    (function(){
+
+          $('html, body').append('<div id="toTop" class="btn btn-primary"><i class="fa fa-chevron-up"></i></div>');
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() != 0) {
+                    $('#toTop').fadeIn();
+                } else {
+                    $('#toTop').fadeOut();
+                }
+            }); 
+
+        $('#toTop').on('click', function(){
+            $("html, body").animate({ scrollTop: -1000 }, 1000);
+            return false;
+        });
+
+    }());
+
+    // ------------------------------------------------------------------
+    // -----------------------------------------------------------------
+    // ------------------------------------------------------------------
 
     $.fn.extend({
         HippoOffCanvasMenu: function (options) {
