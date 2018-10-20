@@ -11,7 +11,7 @@
 			</a>
 
 		  <!-- offcanvas-trigger-effects -->
-			<h1 class="logo"><a class="navbar-brand" href="index.php"><img class="logotipo-nav" src="./images/logo-libras-office-topo.svg" alt="LIBRAS Office" class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".1s"></a></h1>
+			<h1 class="logo"><a class="navbar-brand" href="<?php bloginfo('url'); ?>"><img class="logotipo-nav" src="<?php bloginfo('template_url'); ?>/images/logo-libras-office-topo.svg" alt="LIBRAS Office" class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".1s"></a></h1>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->

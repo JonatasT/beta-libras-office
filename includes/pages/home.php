@@ -13,7 +13,7 @@
     <!-- Wrapper para slider -->
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img class="slides" src="images/slider-principal/fundo11-slide-pagina-inicial.jpg" alt="Slide 1">
+            <img class="slides" src="<?php bloginfo('template_url'); ?>/images/slider-principal/fundo11-slide-pagina-inicial.jpg" alt="Slide 1">
             <!--Slide imagem-->
 
             <div class="container">
@@ -26,7 +26,7 @@
                     surdos sonhou ter por anos.</p>
 					
 					<!--botão download -->
-                    <a class="botao-download" href="baixar.html">
+                    <a class="botao-download" href="baixar.php">
 						<div class="face-primaria">
 					    	<span class="icon fa fa-cloud"></span>
 					    	Baixe agora
@@ -45,7 +45,7 @@
         <!--.item-->
 
         <div class="item">
-            <img class="slides" src="images/slider-principal/fundo2-slide-pagina-inicial.jpg" alt="Slide 2">
+            <img class="slides" src="<?php bloginfo('template_url'); ?>/images/slider-principal/fundo2-slide-pagina-inicial.jpg" alt="Slide 2">
             <!--Slide imagem-->
 
             <div class="container">
@@ -62,7 +62,7 @@
         <!--.item-->
 		
         <div class="item">
-            <img class="slides" src="images/slider-principal/fundo8-slide-pagina-inicial.jpg" alt="Slide 3">
+            <img class="slides" src="<?php bloginfo('template_url'); ?>/images/slider-principal/fundo8-slide-pagina-inicial.jpg" alt="Slide 3">
             <!--Slide imagem-->
 
             <div class="container">
@@ -79,7 +79,7 @@
         <!--.item-->
 
         <div class="item">
-            <img class="slides" src="images/slider-principal/fundo9-slide-pagina-inicial.jpg" alt="Slide 4">
+            <img class="slides" src="<?php bloginfo('template_url'); ?>/images/slider-principal/fundo9-slide-pagina-inicial.jpg" alt="Slide 4">
             <!--Slide imagem-->
 
             <div class="container">
@@ -97,7 +97,7 @@
         <!--.item-->
 
         <div class="item">
-            <img class="slides" src="images/slider-principal/fundo7-slide-pagina-inicial.jpg" alt="Slide 5">
+            <img class="slides" src="<?php bloginfo('template_url'); ?>/images/slider-principal/fundo7-slide-pagina-inicial.jpg" alt="Slide 5">
             <!--Slide imagem-->
 
             <div class="container">
@@ -113,7 +113,7 @@
         </div>
         <!--.item-->
         <div class="item">
-            <img class="slides" src="images/slider-principal/fundo10-slide-pagina-inicial.jpg" alt="Slide 5">
+            <img class="slides" src="<?php bloginfo('template_url'); ?>/images/slider-principal/fundo10-slide-pagina-inicial.jpg" alt="Slide 5">
             <!--Slide imagem-->
 
             <div class="container">
@@ -129,7 +129,7 @@
         </div>
         <!--.item-->
         <div class="item">
-            <img class="slides" src="images/slider-principal/fundo14-slide-pagina-inicial.jpg" alt="Slide 5">
+            <img class="slides" src="<?php bloginfo('template_url'); ?>/images/slider-principal/fundo14-slide-pagina-inicial.jpg" alt="Slide 5">
             <!--Slide imagem-->
 
             <div class="container">
@@ -215,5 +215,3 @@
 	</div>
 	<!-- .Chamada para colaboração -->
 </section>
-
-<?php include('includes/organisms/redes-sociais.php'); ?>
