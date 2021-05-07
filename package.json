@@ -26,6 +26,6 @@
   },
   "dependencies": {
     "hamburgers": "^0.9.3",
-    "lodash": "^4.17.10"
+    "lodash": "^4.17.21"
   }
 }
